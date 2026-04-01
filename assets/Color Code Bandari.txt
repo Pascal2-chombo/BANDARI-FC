@@ -1,0 +1,6 @@
+Deep Blue (border & outlines): rgb(28, 55, 135)
+Light Gray (background inside crest): rgb(216, 216, 214)
+Orange (text, lions, stars): rgb(234, 142, 72)
+Red (anchor): rgb(232, 63, 60)
+Dark Purple/Indigo (chain detail): rgb(80, 75, 110)
+White (background areas): rgb(255, 255, 255)
