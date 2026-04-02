@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --primary-color:rgb(28, 55, 135);
+    --secondary-color:rgb(234, 142, 72);
+    --third-color: rgb(255, 255, 255);
+    --forth-color: rgb(216, 216, 214);
+    --fifth-color: rgb(232, 63, 60);
+    --main-font: Poppins;
+    --secondary-font:Playfair;
+    --b-radius: 14px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font),sans-serif;
+}
+h2{
+    text-align: center;
+    /* margin-top: 85px;
+    margin-bottom: 14px; */
+    font-size: 34px;
+}
+body{
+    background-image: url(assets/images/MbarakiStadium.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form_container{
+    width: auto;
+    height: 380px;
+    background-color: rgba(28, 55, 135,.855);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px;
+    border-radius: var(--b-radius);
+    position: relative;
+    backdrop-filter: blur(4px);
+}
+.form_container img{
+    width: 120px;
+    height: 120px;
+    background-color: var(--third-color);
+    padding: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: -65px;
+}
+.input_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .8rem;
+    width: 260px;
+    margin-bottom: 20px;
+}
+.input_username,
+.input_password{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+.input_username input,
+.input_password input{
+    outline: none;
+    padding: 6px 8px;
+    border-radius: 12px;
+}
+.input_username label,
+.input_password label{
+    position: absolute;
+    top: -9px;
+    left: 10px;
+    background: white;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+}
+
+
+button{
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 6px 8px;
+}
+.input_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+}
