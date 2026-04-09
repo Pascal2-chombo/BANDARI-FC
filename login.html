@@ -8,28 +8,33 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   </head>
   <body>
-    <form>
-      <div class="form_container">
-        <img src="assets/images/BANDARI-FC-Logo.png" alt="bandariLogo" />
-        <div class="input_container">
-            <h2>Log In</h2>
-          <div class="input_username">
-            <label>Username</label>
-            <input type="text" required />
-          </div>
-          <div class="input_password">
-            <label>Password</label>
-            <input type="text" required />
-          </div>
-          <button type="button">Log In</button>
+    <form class="form__container">
+      <div class="main__container">
+        <div class="form_logo">
+          <img src="assets/images/BANDARI-FC-Logo.png" alt="logo" />
         </div>
-        <div class="input_info">
-          <div class="remember_info">
-            <p><input type="checkbox" />Remember Me</p>
+        <div class="input__container">
+          <input type="text" required />
+          <label>Email address</label>
+        </div>
+        <div class="input__container">
+          <input type="text" required />
+          <label>Password</label>
+        </div>
+        <div class="form_reminders">
+          <div class="remember">
+            <input type="checkbox" />
+            <label>Remember Me</label>
           </div>
-          <div class="singin_link">
-            <p>Already Have an account?<a href="signin.html">Sign in</a></p>
+          <div class="forgot">
+            <a href="#">Forgot Password?</a>
           </div>
+        </div>
+        <div class="sign_button">
+          <button>Sign In</button>
+        </div>
+        <div class="reg_button">
+          <button><a href="#">Register</a></button>
         </div>
       </div>
     </form>

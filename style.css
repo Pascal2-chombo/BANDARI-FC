@@ -1,100 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-:root{
-    --primary-color:rgb(28, 55, 135);
-    --secondary-color:rgb(234, 142, 72);
-    --third-color: rgb(255, 255, 255);
-    --forth-color: rgb(216, 216, 214);
-    --fifth-color: rgb(232, 63, 60);
-    --main-font: Poppins;
-    --secondary-font:Playfair;
-    --b-radius: 14px;
+:root {
+  --primary-color: rgb(28, 55, 135);
+  --secondary-color: rgb(234, 142, 72);
+  --third-color: rgb(255, 255, 255);
+  --forth-color: rgb(216, 216, 214);
+  --fifth-color: rgb(232, 63, 60);
+  --main-font: Poppins;
+  --secondary-font: Playfair;
+  --b-radius: 14px;
 }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: var(--main-font),sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font), sans-serif;
 }
-h2{
-    text-align: center;
-    /* margin-top: 85px;
+h2 {
+  text-align: center;
+  /* margin-top: 85px;
     margin-bottom: 14px; */
-    font-size: 34px;
+  font-size: 34px;
 }
-body{
-    background-image: url(assets/images/MbarakiStadium.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
+body {
+  background-image: url(assets/images/stadium2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+img {
+  width: 130px;
+  height: 130px;
+}
+.form_logo {
+  margin-bottom: 100px;
+}
+.form__container {
+  background-color: white;
+  width: 62vh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__container {
+  width: 400px;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.input__container {
+  width: 100%;
+  position: relative;
+  margin: 10px;
+}
+.input__container input {
+  width: 400px;
+  height: 65px;
+  padding: 0 0 0 8px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.input__container label {
+  position: absolute;
+  top: 17px;
+  left: 10px;
+}
+.input__container label {
+  transition: 0.2s ease-in-out;
+}
+.input__container input:focus {
+  outline: none;
+  border: 2px solid var(--fifth-color);
+}
+.input__container input:focus + label,
+.input__container input:valid + label {
+  top: 2px;
+  font-size: 15px;
+}
+.form_reminders{
+    margin: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    gap: 6.5rem;
 }
-.form_container{
-    width: auto;
-    height: 380px;
-    background-color: rgba(28, 55, 135,.855);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 24px;
-    border-radius: var(--b-radius);
-    position: relative;
-    backdrop-filter: blur(4px);
+.forgot a{
+    text-decoration: none;
+    color: var(--fifth-color);
+    text-align: start;
 }
-.form_container img{
-    width: 120px;
-    height: 120px;
-    background-color: var(--third-color);
-    padding: 12px;
-    border-radius: 50%;
-    position: absolute;
-    top: -65px;
-}
-.input_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: .8rem;
-    width: 260px;
-    margin-bottom: 20px;
-}
-.input_username,
-.input_password{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: relative;
-}
-.input_username input,
-.input_password input{
-    outline: none;
-    padding: 6px 8px;
-    border-radius: 12px;
-}
-.input_username label,
-.input_password label{
-    position: absolute;
-    top: -9px;
-    left: 10px;
-    background: white;
-    pointer-events: none;
-    transition: 0.2s ease-in-out;
-}
-
-
 button{
-    width: 100%;
-    border: none;
-    border-radius: 12px;
-    padding: 6px 8px;
+    width: 400px;
+    margin: 8px;
 }
-.input_info{
+.sign_button{
+    border-bottom: 1px solid rgb(146, 146, 146);
+}
+.reg_button{
+
+}
+@media (max-width: 1250px) {
+  body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.7rem;
+  }
+  .form__container {
+    height: 70vh;
+    width: 500px;
+  }
 }
