@@ -71,9 +71,7 @@ img {
   position: absolute;
   top: 17px;
   left: 10px;
-}
-.input__container label {
-  transition: 0.2s ease-in-out;
+   transition: 0.2s ease-in-out;
 }
 .input__container input:focus {
   outline: none;

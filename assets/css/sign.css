@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: rgb(28, 55, 135);
+  --secondary-color: rgb(234, 142, 72);
+  --third-color: rgb(255, 255, 255);
+  --forth-color: rgb(216, 216, 214);
+  --fifth-color: rgb(232, 63, 60);
+  --main-font: Poppins;
+  --secondary-font: Playfair;
+  --b-radius: 14px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font), sans-serif;
+}
+img {
+  width: 120px;
+  height: 120px;
+}
+.nav_container {
+  background-color: var(--primary-color);
+  height: 16vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav_backbutton {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav_backbutton a {
+  width: 34px;
+  height: 34px;
+  padding: 4px;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+.nav_logo {
+  flex: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-move-left {
+  color: brown;
+}
+.main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign_container {
+  width: 500px;
+  height: 84vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.sign_input__container {
+  position: relative;
+}
+.sign_input__container input {
+  width: 450px;
+  height: 48px;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.sign_input__container label {
+  position: absolute;
+  top: 17px;
+  left: 10px;
+  transition: 0.2s ease-in;
+}
+.sign_input__container input:focus {
+  outline: none;
+  border: 1px solid var(--fifth-color);
+}
+.sign_input__container input:focus + label,
+.sign_input__container input:valid + label {
+  top: 2px;
+  font-size: 10px;
+}
+.sign_dob__input__conatiner {
+  width: 450px;
+  padding: 5px;
+}
+.dob_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.day,
+.month,
+.year {
+  height: 48px;
+  position: relative;
+}
+.day input,
+.month input,
+.year input {
+  width: 100px;
+  height: 56px;
+  padding: 6px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.day input:focus,
+.month input:focus,
+.year input:focus {
+  outline: none;
+  border: 1px solid var(--fifth-color);
+}
+.day label,
+.month label,
+.year label {
+  position: absolute;
+  top: 17px;
+  left: 10px;
+  transition: 0.2s ease-in;
+}
+.day input:focus + label,
+.month input:focus + label,
+.year input:focus + label,
+.day input:valid + label,
+.month input:valid + label,
+.year input:valid + label {
+  top: 2px;
+  font-size: 10px;
+}
+.sign_gender_input__container {
+  width: 450px;
+  padding: 5px;
+}
+input[type="radio"] {
+  accent-color: var(--fifth-color);
+}
+.sign_select_input__container {
+  width: 450px;
+  padding: 5px;
+}
+.sign_select_input__container select {
+  width: 70%;
+  height: 30px;
+}
+.sign_button,
+.reg_button {
+  width: 450px;
+  margin: 8px;
+}
+.sign_button button {
+  width: 100%;
+  border: none;
+  padding: 5px;
+  font-size: 18px;
+  color: var(--third-color);
+  background-color: var(--fifth-color);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.sign_button button:hover {
+  background-color: rgba(232, 63, 60, 0.747);
+}
+.reg_button button {
+  width: 100%;
+  border: 1px solid var(--fifth-color);
+  padding: 5px;
+  font-size: 18px;
+  background-color: var(--third-color);
+  transition: 0.4s ease-in;
+  cursor: pointer;
+}
+.reg_button button a {
+  text-decoration: none;
+  color: var(--fifth-color);
+}
+.reg_button p {
+  text-align: center;
+}
+.reg_button button:hover {
+  background-color: var(--fifth-color);
+}
+.reg_button button:hover a {
+  color: var(--third-color);
+}
+@media (max-width: 1250px) {
+  img {
+    width: 110px;
+    height: 110px;
+  }
+  .sign_container {
+    width: 450px;
+  }
+  .sign_input__container input,
+  .sign_gender_input__container,
+  .sign_dob__input__conatiner,
+  .sign_select_input__container,
+  .sign_button,
+  .reg_button {
+    width: 400px;
+  }
+}
+@media (max-width: 785px) {
+  img {
+    width: 100px;
+    height: 100px;
+  }
+  .sign_container {
+    width: 400px;
+  }
+  .sign_input__container input,
+  .sign_gender_input__container,
+  .sign_dob__input__conatiner,
+  .sign_select_input__container,
+  .sign_button,
+  .reg_button {
+    width: 350px;
+  }
+  .day input,
+  .month input,
+  .year input {
+    width: 90px;
+    height: 52px;
+    padding: 4px;
+  }
+  .nav_backbutton a {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+  }
+}
+@media (max-width: 412px) {
+  img {
+    width: 90px;
+    height: 90px;
+  }
+  .sign_container {
+    width: 350px;
+  }
+  .sign_input__container input,
+  .sign_gender_input__container,
+  .sign_dob__input__conatiner,
+  .sign_select_input__container,
+  .sign_button,
+  .reg_button {
+    width: 300px;
+  }
+  .sign_select_input__container select {
+    width: 60%;
+    height: 30px;
+  }
+  .day input,
+  .month input,
+  .year input {
+    width: 80px;
+    height: 50px;
+    padding: 4px;
+  }
+  .nav_backbutton a {
+    width: 28px;
+    height: 28px;
+    padding: 2px;
+  }
+}

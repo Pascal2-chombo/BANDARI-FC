@@ -4,88 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="sign.css" />
+    <link rel="stylesheet" href="assets/css/sign.css" />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   </head>
   <body>
     <div class="nav_container">
       <div class="nav_backbutton">
-        <i data-lucide="move-left"></i>
+        <a href="index.html"><i data-lucide="move-left"></i></a>
       </div>
       <div class="nav_logo">
         <img src="assets/images/BANDARI-FC-Logo.png" alt="logo" />
       </div>
     </div>
-    <div class="sign_container">
-      <div class="sign_input__container">
-        <input type="text" required />
-        <label>First Name</label>
-      </div>
-      <div class="sign_input__container">
-        <input type="text" required />
-        <label>Second Name</label>
-      </div>
-      <div class="sign_input__container">
-        <input type="text" required />
-        <label>Email Address</label>
-      </div>
-      <div class="sign_dob__input__conatiner">
-        <p>Date of Birth</p>
-        <div class="dob_container">
-          <div class="day">
-            <input type="number" min="1" max="31" required />
-            <label>Day</label>
-          </div>
-          <div class="month">
-            <input type="number" min="1" max="31" required />
-            <label>Month</label>
-          </div>
-          <div class="year">
-            <input type="number" min="1936" max="2026" required />
-            <label>Year</label>
+    <div class="main_container">
+      <div class="sign_container">
+        <div class="sign_input__container">
+          <input type="text" required />
+          <label>First Name</label>
+        </div>
+        <div class="sign_input__container">
+          <input type="text" required />
+          <label>Second Name</label>
+        </div>
+        <div class="sign_input__container">
+          <input type="text" required />
+          <label>Email Address</label>
+        </div>
+        <div class="sign_dob__input__conatiner">
+          <p>Date of Birth</p>
+          <div class="dob_container">
+            <div class="day">
+              <input type="number" min="1" max="31" required />
+              <label>Day</label>
+            </div>
+            <div class="month">
+              <input type="number" min="1" max="31" required />
+              <label>Month</label>
+            </div>
+            <div class="year">
+              <input type="number" min="1936" max="2050" required />
+              <label>Year</label>
+            </div>
           </div>
         </div>
+        <div class="sign_gender_input__container">
+          <p>Gender:</p>
+          <div class="gender_container">
+            <input type="radio" name="gender" required />
+            <label>Male</label>
+            <input type="radio" name="gender" required />
+            <label>Female</label>
+          </div>
+        </div>
+        <div class="sign_input__container">
+          <input type="password" required />
+          <label>Password</label>
+        </div>
+        <div class="sign_input__container">
+          <input type="password" required />
+          <label>Confirm Password</label>
+        </div>
+        <div class="sign_select_input__container">
+        <label>Select role:</label>
+        <select>
+          <option class="options"></option>
+          <option class="options">Admin</option>
+          <option class="options">Coach</option>
+          <option class="options">Player</option>
+          <option class="options">Fan</option>
+        </select>
       </div>
-      <div class="sign_gender_input__container">
-        <p>Gender:</p>
-        <div class="gender_container">
-          <input type="radio" name="gender" required />
-          <label>Male</label>
-          <input type="radio" name="gender" required />
-          <label>Female</label>
+      <div class="sign_btns">
+        <div class="sign_button">
+          <button>Register</button>
+        </div>
+        <div class="reg_button">
+          <p>Already have an account?</p>
+          <button><a href="login.html">Sign In</a></button>
         </div>
       </div>
-      <div class="sign_input__container">
-        <input type="password" required />
-        <label>Password</label>
       </div>
-      <div class="sign_input__container">
-        <input type="password" required />
-        <label>Confirm Password</label>
-      </div>
-    </div>
-    <div class="sign_select_input__container">
-      <label>Select role:</label>
-      <select>
-        <option>Admin</option>
-        <option>Coach</option>
-        <option>Player</option>
-        <option>Fan</option>
-      </select>
-    </div>
-    <div class="sign_btns">
-      <div class="sign_button">
-        <button>Register</button>
-      </div>
-      <div class="reg_button">
-        <p>Already have an account?</p>
-        <button><a href="login.html">Sign In</a></button>
-      </div>
+      
     </div>
 
     <!-- Its used to callback the icons in order for them to appear in the frontend -->
     <script>
-      lucide.createIcons()
+      lucide.createIcons();
     </script>
   </body>
 </html>
