@@ -10,3 +10,58 @@
     --secondary-font:Playfair;
     --b-radius: 12px;
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font), sans-serif;
+}
+.navbar{
+    height: 12vh;
+    background-color: var(--primary-color);
+    position: sticky;
+}
+.navbar_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar_logo{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.navbar_logo img{
+    height: 92px;
+    height: 92px;
+}
+.navbar_inputs{
+    flex: 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar_inputs-container{
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+}
+.navbar_input{
+    padding: 8px 12px;
+}
+.navbar_sign{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+/* We use svg instead of i since it often replaces <i> elements with <svg>*/
+svg[data-lucide = "user-round"] {
+  color: var(--secondary-color);
+}
+svg.lucide {
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+}

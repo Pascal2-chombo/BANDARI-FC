@@ -89,6 +89,14 @@ img {
   top: 2px;
   font-size: 10px;
 }
+.sign_input__container img{
+  width: 26px;
+  height: 20px;
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  cursor: pointer;
+}
 .sign_dob__input__conatiner {
   width: 450px;
   padding: 5px;
