@@ -30,6 +30,7 @@
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .navbar_logo img {
   height: 92px;
@@ -69,14 +70,15 @@
   justify-content: center;
   position: relative;
 }
-.navbar_sign-dropdown {
+.navbar_sign-dropdown{
   position: absolute;
   display: none;
   top: 45px;
   background-color: var(--secondary-color);
-  padding: 8px;
+  padding: 10px;
+  border-radius: 4px;
 }
-.navbar_sign-dropdown.active {
+.active{
   display: block;
 }
 .navbar_sign-icon button{
@@ -87,6 +89,19 @@
 .navbar_sign-dropdown-sign{
     border-bottom: 1px solid black;
 }
+.navbar_sign-dropdown-sign,
+.navbar_sign-dropdown-reg{
+  padding: 6px;
+  transition: .6s ease-in-out;
+}
+.navbar_sign-dropdown-sign:hover,
+.navbar_sign-dropdown-reg:hover{
+  background-color: var(--primary-color);
+}
+.navbar_sign-dropdown-sign:hover a p,
+.navbar_sign-dropdown-reg:hover a p{
+  color: var(--secondary-color);
+}
 .navbar_sign-dropdown a{
   text-decoration: none;
   color: var(--secondary-color);
@@ -96,12 +111,79 @@
     font-weight: 500;
     color: var(--primary-color);
 }
+.navbar_menu-icon{
+  display: none;
+}
 /* We use svg instead of i since it often replaces <i> elements with <svg>*/
-svg[data-lucide="user-round"] {
+svg[data-lucide="user-round"],
+svg[data-lucide="menu"] {
   color: var(--secondary-color);
 }
 svg.lucide {
   width: 42px;
   height: 42px;
   cursor: pointer;
+}
+
+
+/* Media queries for responsive  */
+@media (max-width: 1250px) {
+  .navbar_inputs-container {
+  gap: 1.8rem;
+}
+}
+@media (max-width: 1150px) {
+  .navbar_logo img{
+    width: 88px;
+    height: 88px;
+  }
+    .navbar_inputs-container {
+  gap: 1.4rem;
+}
+}
+@media (max-width: 785px){
+  .navbar {
+  height: 10vh;
+}
+  .navbar_logo img{
+    width: 82px;
+    height: 82px;
+    align-items: center;
+  }
+  /* .navbar_container{
+    position: absolute;
+  }
+  .navbar_inputs{
+    width: 250px;
+    height: 100%;
+    background-color: var(--primary-color);
+    position: absolute;
+    display: block;
+  } */
+  .navbar_sign,
+  .navbar_inputs{
+    display: none;
+  }
+  .navbar_menu-icon{
+  flex: 9;
+  margin-right: 10px;
+  display: flex;
+  justify-content: end;
+  
+}
+}
+svg.lucide {
+  width: 39px;                      
+  height: 39px;
+}
+@media (max-width: 412px) {
+  .navbar_logo img{
+    width: 78px;
+    height: 78px;
+    align-items: center;
+  }
+  svg.lucide {
+  width: 36px;
+  height: 36px;
+}
 }
