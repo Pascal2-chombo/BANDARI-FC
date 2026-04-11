@@ -12,7 +12,9 @@
     <nav class="navbar">
       <div class="navbar_container">
         <div class="navbar_logo">
-          <a href="#"><img src="assets/images/BANDARI-FC-Logo.png" alt="logo"></a>
+          <a href="#"
+            ><img src="assets/images/BANDARI-FC-Logo.png" alt="logo"
+          /></a>
         </div>
         <div class="navbar_inputs">
           <div class="navbar_inputs-container">
@@ -34,13 +36,32 @@
           </div>
         </div>
         <div class="navbar_sign">
-          <i data-lucide="user-round"></i> 
+          <div class="navbar_sign-icon">
+            <button onclick="showDropdown()">
+              <i data-lucide="user-round"></i>
+            </button>
+          </div>
+          <div id="navDropdown" class="navbar_sign-dropdown active">
+            <div class="navbar_sign-dropdown-sign">
+              <a href="login.html"><p>Sign In</p></a>
+            </div>
+            <div class="navbar_sign-dropdown-reg">
+              <a href="signin.html"><p>Register</p></a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
 
+    <script>
+      lucide.createIcons();
+      // To enable dropdown for navbar on signIn
 
-    <script src="assets/js/index.js">
+      const navDropdown = document.getElementById("navDropdown");
+
+      function showDropdown() {
+        navDropdown.classList.toggle("active");
+      }
     </script>
   </body>
 </html>

@@ -5,7 +5,7 @@ lucide.createIcons();
 const eyeicon = document.getElementById("eyeicon");
 const password = document.getElementById("password");
 
-eyeicon.onclick = function () {
+eyeicon.onclick = function(){
   if (password.type == "password") {
     password.type = "text";
     eyeicon.src = "assets/images/eye-open.png"
@@ -15,3 +15,4 @@ eyeicon.onclick = function () {
     eyeicon.src = "assets/images/eye-close.png"
   }
 };
+

@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-:root{
-    --primary-color:rgb(28, 55, 135);
-    --secondary-color:rgb(234, 142, 72);
-    --third-color: rgb(255, 255, 255);
-    --forth-color: rgb(216, 216, 214);
-    --fifth-color: rgb(232, 63, 60);
-    --main-font: Poppins;
-    --secondary-font:Playfair;
-    --b-radius: 12px;
+:root {
+  --primary-color: rgb(28, 55, 135);
+  --secondary-color: rgb(234, 142, 72);
+  --third-color: rgb(255, 255, 255);
+  --forth-color: rgb(216, 216, 214);
+  --fifth-color: rgb(232, 63, 60);
+  --main-font: Poppins;
+  --secondary-font: Playfair;
+  --b-radius: 12px;
 }
 * {
   padding: 0;
@@ -16,48 +16,88 @@
   box-sizing: border-box;
   font-family: var(--main-font), sans-serif;
 }
-.navbar{
-    height: 12vh;
-    background-color: var(--primary-color);
-    position: sticky;
+.navbar {
+  height: 12vh;
+  background-color: var(--primary-color);
+  position: sticky;
 }
-.navbar_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.navbar_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.navbar_logo{
-    flex: 1;
-    display: flex;
-    justify-content: center;
+.navbar_logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
-.navbar_logo img{
-    height: 92px;
-    height: 92px;
+.navbar_logo img {
+  height: 92px;
+  height: 92px;
 }
-.navbar_inputs{
-    flex: 8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.navbar_inputs {
+  flex: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.navbar_inputs-container{
-    height: 52px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2.4rem;
+.navbar_inputs-container {
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
 }
-.navbar_input{
-    padding: 8px 12px;
+.navbar_input {
+  padding: 8px 12px;
+  transition: 0.2s ease-in-out;
 }
-.navbar_sign{
-    flex: 1;
-    display: flex;
-    justify-content: center;
+.navbar_input a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+.navbar_input a p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.navbar_input:hover {
+  border-bottom: 2.5px solid var(--fifth-color);
+}
+.navbar_sign {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.navbar_sign-dropdown {
+  position: absolute;
+  display: none;
+  top: 45px;
+  background-color: var(--secondary-color);
+  padding: 8px;
+}
+.navbar_sign-dropdown.active {
+  display: block;
+}
+.navbar_sign-icon button{
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+}
+.navbar_sign-dropdown-sign{
+    border-bottom: 1px solid black;
+}
+.navbar_sign-dropdown a{
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+.navbar_sign-dropdown a p{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-color);
 }
 /* We use svg instead of i since it often replaces <i> elements with <svg>*/
-svg[data-lucide = "user-round"] {
+svg[data-lucide="user-round"] {
   color: var(--secondary-color);
 }
 svg.lucide {
