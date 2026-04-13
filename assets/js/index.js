@@ -16,3 +16,5 @@ eyeicon.onclick = function(){
   }
 };
 
+// To show sidebar
+
