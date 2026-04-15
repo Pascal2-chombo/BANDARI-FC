@@ -9,13 +9,13 @@
   </head>
   <body>
     <!-- Navigation bar section -->
-    <nav>
+    <nav class="navbar">
       <!-- Sidebar -->
       <div class="navbar_container sidebar">
         <div class="close">
           <i onclick="hideSidebar()" data-lucide="x"></i>
         </div>
-         
+
         <div class="navbar_logo">
           <a href="#"
             ><img src="assets/images/BANDARI-FC-Logo.png" alt="logo"
@@ -55,7 +55,7 @@
             </div>
           </div>
         </div>
-      <!-- Main navbar -->
+        <!-- Main navbar -->
       </div>
       <div class="navbar_container">
         <div class="navbar_logo">
@@ -102,17 +102,35 @@
         </div>
       </div>
     </nav>
-<!-- 2. Hero Section -->
+    <!-- 2. Hero Section -->
     <section>
       <div class="hero_container">
-        <div class="hero_content">
-          <h1>Bandari Football Club</h1>
-          <h2>Pride of the Coast. Power on the Pitch</h2>
-          <p>Welcome to Bandari Football Club — a symbol of passion, resilience, and excellence in Kenyan football.</p>
-        </div>
-        <div class="hero_buttons">
-          <button>Our Team</button>
-          <button>View Fixtures</button>
+        <div class="hero_wrapper" id="heroWrapper">
+          <div class="hero_content-container" id="content1">
+            <div class="hero_content">
+              <h1>Bandari Football Club</h1>
+              <h2>Pride of the Coast. Power on the Pitch</h2>
+              <p>
+                Welcome to Bandari Football Club — a symbol of passion,
+                resilience, and excellence in Kenyan football.
+              </p>
+            </div>
+            <div class="hero_buttons">
+              <button>Our Team</button>
+              <button>View Fixtures</button>
+            </div>
+          </div>
+          <div class="hero_content-container" id="content2">
+            <div class="hero_content">
+              <h1>Bandari Football Club</h1>
+              <h2>Power on the Pitch</h2>
+              <p>Welcome to Bandari Football Club</p>
+            </div>
+            <div class="hero_buttons">
+              <button>Buy Tickets</button>
+              <button>Join Fans</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -136,17 +154,37 @@
       // This is to enable sidebar for smaller divices.
       function showSidebar() {
         const sidebar = document.querySelector(`.sidebar`);
-        if(sidebar.style.display == "none"){
+        if (sidebar.style.display == "none") {
           sidebar.style.display = "flex";
+        } else {
+          sidebar.style.display = "none";
+        }
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector(`.sidebar`);
+        sidebar.style.display = "none";
+      }
+
+      // Trial for make the image to change on hero section
+
+      function changeImages() {
+        const heroWrapper = document.querySelector(`.hero_wrapper`);
+        const content1 = document.querySelector(`#content1`);
+        const content2 = document.querySelector(`#content2`);
+
+        if(content1.style.display !== "none"){
+
+          content1.style.display = "none";
+          content2.style.display = "flex";
+          heroWrapper.style.backgroundImage = "url('assets/images/Bandari-FC.png')"
         }
         else{
-          sidebar.style.display = "none";
-        }
+          content1.style.display = "flex";
+          content2.style.display = "none";
+          heroWrapper.style.backgroundImage = "url('assets/images/Bandari-FC-Backg.png')"
+        } 
       }
-      function hideSidebar(){
-        const sidebar = document.querySelector(`.sidebar`);
-          sidebar.style.display = "none";
-      }
+      setInterval(changeImages,5000)
     </script>
   </body>
 </html>

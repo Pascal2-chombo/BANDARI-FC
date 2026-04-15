@@ -17,16 +17,20 @@
   font-family: var(--main-font), sans-serif;
 }
 /* body{
-  background-image: url(a);
+  background-image: url(../images/Bandari-FC-Backg.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 } */
+nav {
+  position: sticky;
+  top: 0;
+}
 .navbar_container {
   height: 12vh;
   background-color: var(--primary-color);
-  position: sticky;
+  /* position: sticky; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,12 +160,12 @@ svg.lucide {
   flex-direction: column;
   gap: 1.8rem;
 }
-.sidebar .navbar_inputs .navbar_inputs-container .navbar_input{
+.sidebar .navbar_inputs .navbar_inputs-container .navbar_input {
   width: 100%;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
 }
-.sidebar .navbar_inputs .navbar_inputs-container .navbar_input:hover{
+.sidebar .navbar_inputs .navbar_inputs-container .navbar_input:hover {
   background-color: var(--fifth-color);
   border: none;
 }
@@ -176,31 +180,49 @@ svg.lucide {
   border: none;
   border-radius: 4px;
 }
-.sidebar .navbar_sign-dropdown{
+.sidebar .navbar_sign-dropdown {
   background-color: var(--primary-color);
 }
 .sidebar .navbar_sign-dropdown .navbar_sign-dropdown-sign p,
-.sidebar .navbar_sign-dropdown .navbar_sign-dropdown-reg p{
+.sidebar .navbar_sign-dropdown .navbar_sign-dropdown-reg p {
   color: var(--secondary-color);
 }
 .sidebar .navbar_sign-dropdown .navbar_sign-dropdown-sign:hover,
-.sidebar .navbar_sign-dropdown .navbar_sign-dropdown-reg:hover{
+.sidebar .navbar_sign-dropdown .navbar_sign-dropdown-reg:hover {
   background-color: var(--secondary-color);
   border-radius: 6px;
 }
 .sidebar .navbar_sign-dropdown .navbar_sign-dropdown-sign:hover p,
-.sidebar .navbar_sign-dropdown .navbar_sign-dropdown-reg:hover p{
+.sidebar .navbar_sign-dropdown .navbar_sign-dropdown-reg:hover p {
   color: var(--primary-color);
 }
-.close{
+.close {
   width: 100%;
 }
 
-.hero_container{
+/* 2. HERO SECTION */
+
+/* .hero_container{
+  background-image: url(../images/Bandari-FC-Backg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 88vh;
-  background-image: url(assets/images/Bandari-FC-Backg.png);
-  
+} */
+.hero_wrapper {
+  background-image: url(../images/Bandari-FC-Backg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 88vh;
 }
+#content1{}
+#content2{
+  display: none;
+}
+
+
+
 /* Media queries for responsive  */
 @media (max-width: 1250px) {
   .navbar_inputs-container {
@@ -229,7 +251,7 @@ svg.lucide {
   .navbar_inputs {
     display: none;
   }
-  .sidebar .navbar_sign{
+  .sidebar .navbar_sign {
     display: flex;
   }
   .navbar_menu-icon {
@@ -239,9 +261,9 @@ svg.lucide {
     justify-content: end;
   }
   svg.lucide {
-  width: 39px;
-  height: 39px;
-}
+    width: 39px;
+    height: 39px;
+  }
 }
 
 @media (max-width: 412px) {
@@ -254,7 +276,7 @@ svg.lucide {
     width: 36px;
     height: 36px;
   }
-  .sidebar{
+  .sidebar {
     width: 100%;
   }
 }
