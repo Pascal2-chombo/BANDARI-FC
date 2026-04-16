@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 :root {
   --primary-color: rgb(28, 55, 135);
   --secondary-color: rgb(234, 142, 72);
   --third-color: rgb(255, 255, 255);
   --forth-color: rgb(216, 216, 214);
   --fifth-color: rgb(232, 63, 60);
-  --main-font: Poppins;
-  --secondary-font: Playfair;
+  --main-font: "Poppins";
+  --secondary-font:  "Playfair Display";
+  --third-font: "Bebas Neue";
   --b-radius: 12px;
 }
 * {
@@ -216,12 +218,116 @@ svg.lucide {
   background-repeat: no-repeat;
   height: 88vh;
 }
-#content1{}
-#content2{
+.hero_wrapper {
+  width: 100%;
+  padding: 70px;
+}
+.hero_content-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 220px;
+  gap: 1.5rem;
+}
+.hero_content h1 {
+  width: 230px;
+  padding: 12px;
+  background-color: rgba(232, 63, 60, 0.6);
+  color: var(--third-color);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.hero_content h2 {
+  font-family: var(--third-font);
+  color: var(--third-color);
+  font-size: 78px;
+}
+.hero_buttons button {
+  margin: 12px;
+  padding: 10px 18px;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+}
+.hero_btn1::after {
+  content: "→";
+  color: var(--third-color);
+}
+.hero_btn2::after {
+  content: "→";
+  color: var(--secondary-color);
+}
+.hero_btn1 {
+  background-color: black;
+  color: var(--secondary-color);
+  border: none;
+  transition: 0.6s ease-in-out;
+}
+.hero_btn2 {
+  border: 2px solid var(--secondary-color);
+  background-color: var(--third-color);
+  color: var(--secondary-color);
+  transition: 0.6s ease-in-out;
+}
+.hero_btn1:hover {
+  background-color: var(--third-color);
+}
+.hero_btn2:hover {
+  background-color: black;
+}
+#content1 {
+}
+#content2 {
   display: none;
 }
 
-
+/* 3. Next Fixture Section */
+.fixture{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fixture_container{
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 40px;
+  background-image: url(../images/back_bandari_ill.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.fixture_container img{
+  width: 120px;
+  width: 120px;
+}
+.fixture_container-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+}
+.fixture_center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: .2rem;
+}
+.fixture_center-bottom{
+  color: var(--third-color);
+}
+.fixture_container-bottom h2{
+  color: var(--fifth-color);
+  font-family: var(--third-font);
+  font-size: 38px;
+}
 
 /* Media queries for responsive  */
 @media (max-width: 1250px) {

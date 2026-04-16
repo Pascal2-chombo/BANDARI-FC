@@ -110,29 +110,50 @@
             <div class="hero_content">
               <h1>Bandari Football Club</h1>
               <h2>Pride of the Coast. Power on the Pitch</h2>
-              <p>
-                Welcome to Bandari Football Club — a symbol of passion,
-                resilience, and excellence in Kenyan football.
-              </p>
             </div>
             <div class="hero_buttons">
-              <button>Our Team</button>
-              <button>View Fixtures</button>
+              <button class="hero_btn1">Our Team</button>
+              <button class="hero_btn2">View Fixtures</button>
             </div>
           </div>
-          <div class="hero_content-container" id="content2">
+          <div class="hero_content-container content2" id="content2">
             <div class="hero_content">
               <h1>Bandari Football Club</h1>
-              <h2>Power on the Pitch</h2>
-              <p>Welcome to Bandari Football Club</p>
+              <h2>Legends Made through Effort</h2>
             </div>
             <div class="hero_buttons">
-              <button>Buy Tickets</button>
-              <button>Join Fans</button>
+              <button class="hero_btn1">Buy Tickets</button>
+              <button class="hero_btn2">Join Fans</button>
             </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- 3. Next Fixture Section -->
+
+    <section class="fixture">
+      <div class="fixture_container">
+        <div class="fixture_container-top">
+        <div class="fixture_left">
+          <img src="assets/images/BANDARI-FC-Logo.png" alt="logo" />
+        </div>
+        <div class="fixture_center">
+          <div class="fixture_center-top"><h2>25/04/2026</h2></div>
+          <div class="fixture_center-bottom"><h2>2:30 PM</h2></div>
+        </div>
+        <div class="fixture_right">
+          <img
+            src="assets/images/gor-mahia-fc-logo-png_seeklogo-370592.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="fixture_container-bottom">
+        <h2>MBARAKI STADIUM</h2>
+      </div>
+      </div>
+      
     </section>
 
     <script>
@@ -167,24 +188,24 @@
 
       // Trial for make the image to change on hero section
 
-      function changeImages() {
-        const heroWrapper = document.querySelector(`.hero_wrapper`);
-        const content1 = document.querySelector(`#content1`);
-        const content2 = document.querySelector(`#content2`);
+      // function changeImages() {
+      //   const heroWrapper = document.querySelector(`.hero_wrapper`);
+      //   const content1 = document.querySelector(`#content1`);
+      //   const content2 = document.querySelector(`#content2`);
 
-        if(content1.style.display !== "none"){
+      //   if(content1.style.display !== "none"){
 
-          content1.style.display = "none";
-          content2.style.display = "flex";
-          heroWrapper.style.backgroundImage = "url('assets/images/Bandari-FC.png')"
-        }
-        else{
-          content1.style.display = "flex";
-          content2.style.display = "none";
-          heroWrapper.style.backgroundImage = "url('assets/images/Bandari-FC-Backg.png')"
-        } 
-      }
-      setInterval(changeImages,5000)
+      //     content1.style.display = "none";
+      //     content2.style.display = "flex";
+      //     heroWrapper.style.backgroundImage = "url('assets/images/Bandari-FC.png')"
+      //   }
+      //   else{
+      //     content1.style.display = "flex";
+      //     content2.style.display = "none";
+      //     heroWrapper.style.backgroundImage = "url('assets/images/Bandari-FC-Backg.png')"
+      //   }
+      // }
+      // setInterval(changeImages,5000)
     </script>
   </body>
 </html>
