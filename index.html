@@ -188,24 +188,24 @@
 
       // Trial for make the image to change on hero section
 
-      // function changeImages() {
-      //   const heroWrapper = document.querySelector(`.hero_wrapper`);
-      //   const content1 = document.querySelector(`#content1`);
-      //   const content2 = document.querySelector(`#content2`);
+      function changeImages() {
+        const heroWrapper = document.querySelector(`.hero_wrapper`);
+        const content1 = document.querySelector(`#content1`);
+        const content2 = document.querySelector(`#content2`);
 
-      //   if(content1.style.display !== "none"){
+        if(content1.style.display !== "none"){
 
-      //     content1.style.display = "none";
-      //     content2.style.display = "flex";
-      //     heroWrapper.style.backgroundImage = "url('assets/images/Bandari-FC.png')"
-      //   }
-      //   else{
-      //     content1.style.display = "flex";
-      //     content2.style.display = "none";
-      //     heroWrapper.style.backgroundImage = "url('assets/images/Bandari-FC-Backg.png')"
-      //   }
-      // }
-      // setInterval(changeImages,5000)
+          content1.style.display = "none";
+          content2.style.display = "flex";
+          heroWrapper.style.backgroundImage = "url('assets/images/Bandari-FC.png')"
+        }
+        else{
+          content1.style.display = "flex";
+          content2.style.display = "none";
+          heroWrapper.style.backgroundImage = "url('assets/images/Bandari-FC-Backg.png')"
+        }
+      }
+      setInterval(changeImages,5000)
     </script>
   </body>
 </html>
