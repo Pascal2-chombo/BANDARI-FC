@@ -159,6 +159,7 @@ input[type="radio"] {
 .sign_select_input__container select {
   width: 70%;
   height: 30px;
+  outline: none;
 }
 .sign_button,
 .reg_button {
