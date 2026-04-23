@@ -524,6 +524,23 @@ svg.lucide {
 .btn_news:hover {
   background-color: rgba(28, 55, 135, 0.7);
 }
+
+/* 5. Fixtures */
+.fixtures_title h2 {
+  font-size: 54px;
+  font-family: var(--secondary-font);
+}
+.fixtures_title-container::before {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 8px;
+  background-color: var(--fifth-color);
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+
 /* Media queries for responsive  */
 
 /* 1. Nav bar section */
