@@ -483,7 +483,7 @@ svg.lucide {
 }
 .news_wrapper:hover {
   transform: scale(1.02);
-  box-shadow: 0 4px 12px 2px rgba(232, 63, 60,.75);
+  box-shadow: 0 4px 12px 2px rgba(232, 63, 60, 0.75);
 }
 .news_content-container {
   padding: 10px;
@@ -526,6 +526,9 @@ svg.lucide {
 }
 
 /* 5. Fixtures */
+.fixtures {
+  padding: 20px 0;
+}
 .fixtures_title h2 {
   font-size: 54px;
   font-family: var(--secondary-font);
@@ -539,8 +542,107 @@ svg.lucide {
   margin-right: 20px;
   vertical-align: middle;
 }
-
-
+.fixtures_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 40px 80px;
+}
+.fixtures_container-left {
+  flex: 2;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: rgba(28, 55, 135,.875);
+}
+.latest_result {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.latest_result-header {
+  display: flex;
+  justify-content: center;
+  gap: 2.2rem;
+}
+.latest_result-header h2 {
+  font-size: 20px;
+  color: var(--secondary-color);
+}
+.latest_result-header a h2{
+  color: var(--forth-color);
+}
+.latest_result-header a {
+  text-decoration: none;
+  color: black;
+}
+.latest_result-header a h2::after {
+  content: "➡";
+  color: var(--secondary-color);
+}
+.latest_result-content {
+  width: 100%;
+}
+.result_content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: .5rem;
+  margin-bottom: 8px;
+}
+.match_competition {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+.match_competition img{
+  width: 60px;
+  height: 60px;
+}
+.match_result{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home_team h2,
+.away_team h2{
+  font-size: 16px;
+}
+.result{
+  margin: 4px;
+  display: flex;
+  gap: 0.25rem;
+}
+.home_result,
+.away_result{
+  width: 40px;
+  height: 38px;
+  text-align: center;
+  background-color: var(--secondary-color);
+  border-radius: 6px;
+}
+.home_result h2,
+.away_result h2{
+  color: var(--primary-color);
+}
+.latest_result-btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+}
+.latest_result-btn button{
+  width: 80%;
+  padding: 8px 14px;
+  border: none;
+}
+.fixtures_container-right {
+  flex: 8;
+  height: 380px;
+}
 /* Media queries for responsive  */
 
 /* 1. Nav bar section */
@@ -889,7 +991,7 @@ svg.lucide {
     width: 350px;
     height: 380px;
   }
-    .news_content-container {
+  .news_content-container {
     padding: 8px;
   }
   .news_content h3 {
