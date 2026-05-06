@@ -479,7 +479,7 @@ svg.lucide {
 }
 .news_wrapper {
   background-color: var(--third-color);
-  transition: 0.2s ease-in-out;
+  transition: 0.8s ease-in-out;
 }
 .news_wrapper:hover {
   transform: scale(1.02);
@@ -781,72 +781,71 @@ svg.lucide {
     vertical-align: middle;
   }
   .fixtures_container-left {
-  padding: 14px;
-}
+    padding: 14px;
+  }
   .fixtures_container {
-  padding: 20px;
-}
+    padding: 20px;
+  }
   .latest_result-header h2 {
-  font-size: 14px;
-  font-weight: 600;
-}
-.latest_result-header {
-  gap: 0.4rem;
-}
-.match_competition img{
-  width: 40px;
-  height: 40px;
-}
-.result_content h3{
-  font-size: 14px;
-}
-.match_result h2{
-  font-size: 16px;
-}
-.home_result,
-.away_result {
-  width: 30px;
-  height: 26px;
-  text-align: center;
-  background-color: var(--secondary-color);
-  border-radius: 6px;
-}
-.fixtures_container-right {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .latest_result-header {
+    gap: 0.4rem;
+  }
+  .match_competition img {
+    width: 40px;
+    height: 40px;
+  }
+  .result_content h3 {
+    font-size: 14px;
+  }
+  .match_result h2 {
+    font-size: 16px;
+  }
+  .home_result,
+  .away_result {
+    width: 30px;
+    height: 26px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+  }
+  .fixtures_container-right {
     padding: 16px;
-}
-.match_date-date h2{
-  font-size: 18px;
-}
-.next_match {
-  gap: 0.8rem;
-  padding: 8px;
-
-}
-.home_team-name h2,
-.away_team-name h2,
-.match_teams-vs {
-  font-size: 13px;
-}
-.match_venue {
-  padding: 7.5px;
-}
-.match_venue  h3{
-  font-size: 16px;
-}
-.home_team-logo img,
-.away_team-logo img {
-  width: 35px;
-  height: 35px;
-}
-.away_team-logo.afc img {
-  width: 50px;
-  height: 36px;
-}
-.away_team-logo.shabana img {
-  width: 25px;
-  height: 29px;
-}
- svg.lucide {
+  }
+  .match_date-date h2 {
+    font-size: 18px;
+  }
+  .next_match {
+    gap: 0.8rem;
+    padding: 8px;
+  }
+  .home_team-name h2,
+  .away_team-name h2,
+  .match_teams-vs {
+    font-size: 13px;
+  }
+  .match_venue {
+    padding: 7.5px;
+  }
+  .match_venue h3 {
+    font-size: 16px;
+  }
+  .home_team-logo img,
+  .away_team-logo img {
+    width: 35px;
+    height: 35px;
+  }
+  .away_team-logo.afc img {
+    width: 50px;
+    height: 36px;
+  }
+  .away_team-logo.shabana img {
+    width: 25px;
+    height: 29px;
+  }
+  svg.lucide {
     width: 36px;
     height: 36px;
   }
@@ -941,7 +940,7 @@ svg.lucide {
     margin-right: 18px;
     vertical-align: middle;
   }
-    /*  5. Next Fixtures */
+  /*  5. Next Fixtures */
   .fixtures_title h2 {
     font-size: 42px;
     font-family: var(--secondary-font);
@@ -958,15 +957,15 @@ svg.lucide {
   /* 5. Next Fixtures */
 
   .fixtures_container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 20px;
-}
-.fixtures_container-right{
-  width: 90%;
-}
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 20px;
+  }
+  .fixtures_container-right {
+    width: 90%;
+  }
 }
 @media (max-width: 785px) {
   /* 1. Nav bar section */
@@ -1077,7 +1076,7 @@ svg.lucide {
     margin-right: 16px;
     vertical-align: middle;
   }
-      /*  5. Next Fixtures */
+  /*  5. Next Fixtures */
   .fixtures_title h2 {
     font-size: 38px;
     font-family: var(--secondary-font);
@@ -1092,18 +1091,20 @@ svg.lucide {
     vertical-align: middle;
   }
 
-  /* 5. Next Fixtures */
-.fixtures_container-right{
-  width: 50%;
-}
+  .fixtures_container-right {
+    width: 50%;
+  }
   .next_fixtures {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  flex-direction: column;
-  margin-top: 10px;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .next_match{
+    width: 95%;
+  }
 }
 
 @media (max-width: 412px) {
@@ -1194,7 +1195,7 @@ svg.lucide {
   .news_title h2 {
     font-size: 34px;
   }
-        /*  5. Next Fixtures */
+  /*  5. Next Fixtures */
   .fixtures_title h2 {
     font-size: 34px;
     font-family: var(--secondary-font);
@@ -1207,6 +1208,12 @@ svg.lucide {
     background-color: var(--fifth-color);
     margin-right: 14px;
     vertical-align: middle;
+  }
+  .fixtures_container-right {
+    width: 85%;
+  }
+  .next_match{
+    width: 95%;
   }
 }
 .news_title-container::before {
