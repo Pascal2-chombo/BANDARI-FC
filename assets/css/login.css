@@ -71,7 +71,7 @@ body {
   position: absolute;
   top: 17px;
   left: 10px;
-   transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .input__container input:focus {
   outline: none;
@@ -82,7 +82,7 @@ body {
   top: 2px;
   font-size: 12px;
 }
-.input__container img{
+.input__container img {
   width: 26px;
   height: 20px;
   position: absolute;
@@ -91,13 +91,13 @@ body {
   cursor: pointer;
 }
 .form_reminders {
+  width: 100%;
   margin: 10px;
   display: flex;
-  justify-content: start;
-  gap: 6.5rem;
+  justify-content: space-between;
 }
-input[type = "checkbox"]{
-    accent-color: var(--fifth-color);
+input[type="checkbox"] {
+  accent-color: var(--fifth-color);
 }
 .forgot a {
   text-decoration: none;
@@ -108,40 +108,41 @@ button {
   width: 400px;
   margin: 8px;
 }
-.sign_button button{
-    border: none;
-    padding: 5px;
-    font-size: 18px;
-    color: var(--third-color);
-    background-color: var(--fifth-color);
-    transition: .5s ease-in-out;
-    cursor: pointer;
+.sign_button button {
+  border: none;
+  padding: 5px;
+  font-size: 18px;
+  color: var(--third-color);
+  background-color: var(--fifth-color);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
-.sign_button button:hover{
-    background-color: rgba(232, 63, 60, 0.747);
+.sign_button button:hover {
+  background-color: rgba(232, 63, 60, 0.747);
 }
 .sign_button {
   border-bottom: 1px solid rgb(146, 146, 146);
 }
-.reg_button button{
-    border: 1px solid var(--fifth-color);
-    padding: 5px;
-    font-size: 18px;
-    background-color: var(--third-color);
-    transition: .4s ease-in;
-    cursor: pointer;
+.reg_button button {
+  border: 1px solid var(--fifth-color);
+  padding: 5px;
+  font-size: 18px;
+  background-color: var(--third-color);
+  transition: 0.4s ease-in;
+  cursor: pointer;
 }
 .reg_button button a {
-    text-decoration: none;
-    color: var(--fifth-color);
+  text-decoration: none;
+  color: var(--fifth-color);
 }
-.reg_button p{
-    text-align: center;
+.reg_button p {
+  text-align: center;
 }
-.reg_button button:hover{
-    background-color: var(--fifth-color);
-}.reg_button button:hover a{
-    color: var(--third-color);
+.reg_button button:hover {
+  background-color: var(--fifth-color);
+}
+.reg_button button:hover a {
+  color: var(--third-color);
 }
 @media (max-width: 1250px) {
   .form_logo img {
@@ -155,12 +156,9 @@ button {
   .input__container input {
     width: 350px;
   }
-  button{
+  button {
     width: 350px;
   }
-    .form_reminders{
-    gap: 3rem;
-}
 }
 @media (max-width: 1150px) {
   body {
@@ -173,12 +171,9 @@ button {
     width: 480px;
     padding: 12px;
   }
-  .form_reminders{
-    gap: 2.5rem;
 }
-}
-@media (max-width: 785px){
-    .form__container {
+@media (max-width: 785px) {
+  .form__container {
     height: 70vh;
     width: 380px;
     padding: 10px;
@@ -188,10 +183,47 @@ button {
     width: 320px;
   }
   button {
-  width: 320px;
-  margin: 8px;
+    width: 320px;
+    margin: 8px;
+  }
 }
-.form_reminders{
-    gap: 1.4rem;
-}
+@media (max-width: 360px) {
+  .form_logo img {
+    width: 95px;
+    height: 95px;
+  }
+  .form_logo {
+    margin-bottom: 48px;
+  }
+  .form__container {
+    height: 70vh;
+    width: 320px;
+    padding: 10px;
+  }
+  .main__container,
+  .input__container input {
+    width: 280px;
+  }
+  .input__container label {
+    font-size: 14px;
+  }
+  .input__container input:focus + label,
+  .input__container input:valid + label {
+    top: 2px;
+    font-size: 10px;
+  }
+  .input__container img {
+    width: 24px;
+    height: 18px;
+  }
+  button {
+    width: 265px;
+    margin: 8px;
+  }
+  .remember label {
+    font-size: 14px;
+  }
+  .forgot a {
+    font-size: 14px;
+  }
 }
