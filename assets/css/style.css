@@ -139,7 +139,7 @@ svg.lucide {
 }
 /* Sidebar for small devices */
 .sidebar {
-  width: 280px;
+  width: 300px;
   height: 100vh;
   padding: 0 0 0 12px;
   right: 0;
@@ -161,7 +161,7 @@ svg.lucide {
   justify-content: flex-end;
   align-items: flex-start;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 1rem;
 }
 .sidebar .navbar_inputs .navbar_inputs-container .navbar_input {
   width: 100%;
@@ -969,6 +969,13 @@ svg.lucide {
 }
 @media (max-width: 785px) {
   /* 1. Nav bar section */
+  .navbar_container {
+    height: 10vh;
+  }
+  .navbar_container.sidebar {
+    height: 100%;
+  }
+
   .navbar_logo img {
     width: 82px;
     height: 82px;
@@ -1102,24 +1109,33 @@ svg.lucide {
     flex-direction: column;
     margin-top: 10px;
   }
-  .next_match{
+  .next_match {
     width: 95%;
   }
 }
 
 @media (max-width: 412px) {
   /* 1. Nav bar section */
+  .navbar_container {
+    height: 10vh;
+  }
   .navbar_logo img {
-    width: 78px;
-    height: 78px;
+    width: 62px;
+    height: 62px;
   }
   svg.lucide {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
   }
   .sidebar {
     width: 100%;
   }
+  .navbar_sign {
+    margin-right: 10px;
+  }
+    .sidebar .navbar_inputs .navbar_inputs-container a p {
+  font-size: 20px;
+}
   /* 2. Hero section */
   .hero_wrapper {
     padding: 20px;
@@ -1212,7 +1228,109 @@ svg.lucide {
   .fixtures_container-right {
     width: 85%;
   }
-  .next_match{
+  .next_match {
+    width: 95%;
+  }
+}
+@media (max-width: 360px) {
+  /* 1. Nav bar section */
+  .navbar_container {
+    height: 9.5vh;
+  }
+  .navbar_logo img {
+    width: 58px;
+    height: 58px;
+  }
+  svg.lucide {
+    width: 30px;
+    height: 30px;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .navbar_sign {
+    margin-right: 10px;
+  }
+  .sidebar .navbar_inputs .navbar_inputs-container a p {
+  font-size: 16px;
+}
+  /* 2. Hero section */
+  .hero_wrapper {
+    padding: 20px;
+  }
+  .hero_content h2 {
+    font-size: 48px;
+  }
+  .hero_buttons button {
+    margin: 12px;
+    padding: 7px 13px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+    /* 3. Next-Fixture section */
+  .fixture_container {
+    width: 330px;
+  }
+  .fixture_container img {
+    width: 52px;
+    width: 52px;
+  }
+  .fixture_container-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  /* 4. News */
+  .news_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 34px;
+  }
+  .news_wrapper {
+    width: 312px;
+    height: 360px;
+  }
+  .news_content-container {
+    padding: 8px;
+  }
+  .news_content h3 {
+    font-size: 14px;
+    color: var(--fifth-color);
+  }
+  .news_content p {
+    font-size: 13px;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+  }
+  .news_btn {
+    margin-top: 8px;
+  }
+  .news_title h2 {
+    font-size: 30px;
+  }
+  .news1 .news_wrapper-image {
+  height: 60%;
+}
+  /*  5. Next Fixtures */
+  .fixtures_title h2 {
+    font-size: 34px;
+    font-family: var(--secondary-font);
+  }
+  .fixtures_title-container::before {
+    content: "";
+    display: inline-block;
+    width: 70px;
+    height: 6px;
+    background-color: var(--fifth-color);
+    margin-right: 14px;
+    vertical-align: middle;
+  }
+  .fixtures_container-right {
+    width: 95%;
+  }
+  .next_match {
     width: 95%;
   }
 }
