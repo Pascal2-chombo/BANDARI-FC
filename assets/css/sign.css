@@ -280,3 +280,29 @@ input[type="radio"] {
     padding: 2px;
   }
 }
+@media (max-width: 360px) {
+  .nav_backbutton{
+    margin-left: 8px;
+  }
+  img {
+    width: 65px;
+    height: 65px;
+  }
+  .form__container{
+    margin-top: 42px;
+  }
+  .sign_input__container label,
+  .sign_input__container p,
+  .dob_container label{
+    font-size: 15px;
+  }
+  .sign_input__container img{
+    width: 22px;
+    height: 15px;
+  }
+  .sign_input__container input:focus + label,
+.sign_input__container input:valid + label {
+  top: 2px;
+  font-size: 8.5px;
+}
+}

@@ -714,6 +714,31 @@ svg.lucide {
   background-color: var(--fifth-color);
 }
 
+/* 6. Shop Section  */
+.shop {
+  padding: 42px;
+  
+}
+.title-sub_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.title-sub_container h1{
+  font-size: 36px;
+}
+.title_container h2{
+  font-size: 23px;
+}
+
+.shop_page a{
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.shop_page span{
+  font-size: 1.5rem;
+}
 /* Media queries for responsive  */
 
 @media (max-width: 1250px) {
@@ -1133,9 +1158,9 @@ svg.lucide {
   .navbar_sign {
     margin-right: 10px;
   }
-    .sidebar .navbar_inputs .navbar_inputs-container a p {
-  font-size: 20px;
-}
+  .sidebar .navbar_inputs .navbar_inputs-container a p {
+    font-size: 20px;
+  }
   /* 2. Hero section */
   .hero_wrapper {
     padding: 20px;
@@ -1252,8 +1277,8 @@ svg.lucide {
     margin-right: 10px;
   }
   .sidebar .navbar_inputs .navbar_inputs-container a p {
-  font-size: 16px;
-}
+    font-size: 16px;
+  }
   /* 2. Hero section */
   .hero_wrapper {
     padding: 20px;
@@ -1267,7 +1292,7 @@ svg.lucide {
     font-weight: 600;
     font-size: 14px;
   }
-    /* 3. Next-Fixture section */
+  /* 3. Next-Fixture section */
   .fixture_container {
     width: 330px;
   }
@@ -1311,8 +1336,8 @@ svg.lucide {
     font-size: 30px;
   }
   .news1 .news_wrapper-image {
-  height: 60%;
-}
+    height: 60%;
+  }
   /*  5. Next Fixtures */
   .fixtures_title h2 {
     font-size: 34px;
