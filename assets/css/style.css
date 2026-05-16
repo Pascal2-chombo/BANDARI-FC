@@ -739,13 +739,20 @@ svg.lucide {
   font-size: 1.5rem;
 }
 .shop_container {
+  display: flex;
+  overflow-x: auto;
   margin-top: 38px;
+  padding: 26px;
+}
+.shop_container::-webkit-scrollbar{
+  display: none;
 }
 .shop_wrapper {
   display: flex;
   justify-content: center;
-  gap: 2.4rem;
+  gap: 3.5rem;
   position: relative;
+  margin-left: 140px;
 }
 .shop_slide-btn__left {
   position: absolute;
@@ -757,8 +764,9 @@ svg.lucide {
   background-color: var(--secondary-color);
   border-radius: 14px;
   cursor: pointer;
-  left: 50px;
+  left: -60px;
   top: 40%;
+  z-index: 20;
 }
 .shop_slide-btn__right {
   position: absolute;
@@ -770,8 +778,9 @@ svg.lucide {
   background-color: var(--secondary-color);
   border-radius: 14px;
   cursor: pointer;
-  right: 50px;
+  left: 1350px;
   top: 40%;
+  z-index: 20;
 }
 .shop_slide-btn__left span,
 .shop_slide-btn__right span {
@@ -786,7 +795,7 @@ svg.lucide {
 }
 .cards {
   flex: 0 0 410px;
-  height: auto;
+  height: 600px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -842,6 +851,7 @@ svg.lucide {
   font-size: 18px;
   font-weight: 600;
 }
+
 /* Media queries for responsive  */
 
 @media (max-width: 1250px) {
