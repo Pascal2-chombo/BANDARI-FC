@@ -1,61 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Administrator Dashboard</title>
     <script src="https://unpkg.com/lucide@latest"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 1. Side Bar Menu -->
-    <div class="sidebar_container">
-        
-    </div>
+    <div class="sidebar_container" id="sideBar"></div>
     <!-- 2. Main Content -->
 
     <div class="main_container">
-        <!-- 2.1 Top Menu -->
-         <div class="header_container">
-            <div class="close_btn">
-                <i data-lucide="menu" onclick="hideSidebar()"></i>
-            </div>
-            <div class="header_search">
-                <div class="search_bar">
-                    <input type="text">
-                </div>
-                <div class="search_btn">
-                    <i data-lucide="search"></i>  
-                </div>
-            </div>
-            <div class="header_profile">
-                <div class="profile_content">
-                    <p>Welcome,</p>
-                </div>
-                <div class="profile">
-                    <i data-lucide="user-round"></i>
-                    <span class="profile_online"></span>
-                </div>
-            </div>
-         </div>
-         <!-- 2.2 Content -->
-          <div class="content_container">
-
+      <!-- 2.1 Top Menu -->
+      <div class="header_container">
+        <div class="close_btn">
+          <i data-lucide="menu" onclick="hideSidebar()"></i>
+        </div>
+        <div class="header_search">
+          <div class="search_bar">
+            <input type="text" />
           </div>
+          <div class="search_btn">
+            <i data-lucide="search"></i>
+          </div>
+        </div>
+        <div class="header_profile">
+          <div class="profile_content">
+            <p>Welcome,</p>
+          </div>
+          <div class="profile">
+            <i data-lucide="user-round"></i>
+            <span class="profile_online"></span>
+          </div>
+        </div>
+      </div>
+      <!-- 2.2 Content -->
+      <div class="content_container"></div>
     </div>
 
-
     <script>
-        lucide.createIcons();
+      lucide.createIcons();
 
-        function hideSidebar(){
-           const sideBar = document.querySelector(`.sidebar_container`);
-           if(sideBar.style.width > 0){
-            sideBar.style.width = 0;
-           }
+      const sideBar = document.querySelector(".sidebar_container");
+      const mainContainer = document.querySelector(".main_container");
+
+      function hideSidebar() {
+        if ((sideBar.style.width === "20vw")) {
+          sideBar.style.width = "8vw";
+          mainContainer.style.width = "92vw";
+        } else {
+          sideBar.style.width = "20vw";
+          mainContainer.style.width = "80vw";
         }
+      }
 
-        console.log("Hello");
+      console.log("Hello");
     </script>
-</body>
+  </body>
 </html>
