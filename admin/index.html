@@ -1,28 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Administrator Dashboard</title>
-</head>
-<body>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
     <!-- 1. Side Bar Menu -->
-    <div class="sidebar_container">
-
-    </div>
+    <div class="sidebar_container" id="sideBar"></div>
     <!-- 2. Main Content -->
 
     <div class="main_container">
-        <!-- 2.1 Top Menu -->
-         <div class="header_container">
-
-         </div>
-         <!-- 2.2 Content -->
-          <div class="content_container">
-
+      <!-- 2.1 Top Menu -->
+      <div class="header_container">
+        <div class="close_btn">
+          <i data-lucide="menu" onclick="hideSidebar()"></i>
+        </div>
+        <div class="header_search">
+          <div class="search_bar">
+            <input type="text" />
           </div>
+          <div class="search_btn">
+            <i data-lucide="search"></i>
+          </div>
+        </div>
+        <div class="header_profile" id="profileDropdown">
+          <div class="profile_content">
+            <p>Welcome,</p>
+          </div>
+          <div class="profile">
+            <i data-lucide="user-round"></i>
+            <span class="profile_online"></span>
+          </div>
+          <div class="profile_dropdown">
+            <div class="dropdown_content top">
+              <i data-lucide="circle-user-round"></i>  
+              <p>Reset Password</p>
+            </div>
+            <div class="dropdown_content">
+              <i data-lucide="log-out"></i> 
+              <p>Log Out</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 2.2 Content -->
+      <div class="content_container"></div>
     </div>
 
-</body>
+    <script>
+      lucide.createIcons();
+
+      // 
+
+      const sideBar = document.querySelector(".sidebar_container");
+      const mainContainer = document.querySelector(".main_container");
+
+      function hideSidebar() {
+        if ((sideBar.style.width === "20vw")) {
+          sideBar.style.width = "8vw";
+          mainContainer.style.width = "92vw";
+        } else {
+          sideBar.style.width = "20vw";
+          mainContainer.style.width = "80vw";
+        }
+      }
+
+
+      // Pop up Profile Dropdown
+
+      const profileDropdown = document.getElementById("profileDropdown");
+      const dropDown = document.querySelector('.profile_dropdown');
+
+      profileDropdown.addEventListener("click", function(){
+        dropDown.classList.toggle("show")
+      })
+
+    </script>
+  </body>
 </html>
