@@ -750,22 +750,25 @@ svg.lucide {
   font-size: 1.5rem;
 }
 .shop_container {
-  display: flex;
-  overflow-x: auto;
+  position: relative;
   margin-top: 38px;
   padding: 26px;
-}
-.shop_container::-webkit-scrollbar {
-  display: none;
-}
-.shop_wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 3.5rem;
-  position: relative;
+  overflow: hidden;
   margin-left: 140px;
 }
-.shop_slide-btn__left {
+
+.shop_wrapper {
+  width: auto;
+  display: flex;
+  gap: 3.5rem;
+  overflow-x: auto;
+  padding: 40px;
+}
+.shop_wrapper::-webkit-scrollbar {
+  display: none;
+}
+.shop_slide-btn__left,
+.shop_slide-btn__right {
   position: absolute;
   width: 80px;
   height: 80px;
@@ -775,23 +778,17 @@ svg.lucide {
   background-color: var(--secondary-color);
   border-radius: 14px;
   cursor: pointer;
-  left: -60px;
-  top: 40%;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 20;
+  border: none;
 }
+.shop_slide-btn__left {
+  left: 10px;
+}
+
 .shop_slide-btn__right {
-  position: absolute;
-  width: 72px;
-  height: 72px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--secondary-color);
-  border-radius: 14px;
-  cursor: pointer;
-  left: 1350px;
-  top: 40%;
-  z-index: 20;
+  right: 10px;
 }
 .shop_slide-btn__left span,
 .shop_slide-btn__right span {
@@ -805,7 +802,7 @@ svg.lucide {
   bottom: 10px;
 }
 .cards {
-  flex: 0 0 410px;
+  flex: 0 0 430px;
   height: 600px;
   display: flex;
   justify-content: center;
@@ -892,37 +889,59 @@ svg.lucide {
   align-items: center;
   gap: 1.2rem;
 }
+#btn1 {
+  background-color: var(--secondary-color);
+}
 .club_container-top-content {
   padding: 10px;
-  transition: 0.5s ease-in;
-}
-.club_container-top-content.active {
-  background-color: var(--secondary-color);
+  cursor: pointer;
   border-radius: 8px;
-}
-.club_container-top-content.center {
-  border-left: 1px solid var(--fifth-color);
-  border-right: 1px solid var(--fifth-color);
+  border: 1px solid var(--secondary-color);
+  transition: .5s  ease-in;
 }
 
 .club_container-top-content:hover {
   background-color: var(--secondary-color);
-  border-radius: 8px;
 }
-.club_container-bottom{
+.club_container-bottom {
   width: 100%;
   height: 720px;
-  display: flex;
+  display: none;
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 16px;
   /* justify-content: center;
   align-self: center; */
 }
-.club_container-bottom-left{
+.club_container-bottom-left {
   width: 40%;
-  background-color: aqua;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 16px;
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 16px;
 }
-.club_container-bottom-right{
+.history_content h3,
+.trophies_content h3 {
+  font-family: var(--third-font);
+  font-size: 24px;
+  color: var(--primary-color);
+}
+.trophies_content {
+  text-align: center;
+}
+.club_container-bottom-right {
   width: 60%;
-  background-color: rgb(210, 240, 79);
+}
+.club_container-bottom-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#history {
+  display: flex;
 }
 
 /* 8. Sponsors Section */
@@ -940,12 +959,11 @@ svg.lucide {
   vertical-align: middle;
 }
 .principal_sponsors-header h3,
-.secondary_sponsors-header h3
-{
+.secondary_sponsors-header h3 {
   text-align: center;
   font-family: var(--secondary-font);
 }
-.sponsors_container{
+.sponsors_container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -955,99 +973,98 @@ svg.lucide {
   padding: 20px;
   background-color: var(--secondary-color);
 }
-.principal_sponsors-content{
+.principal_sponsors-content {
   display: flex;
   gap: 3.5rem;
   padding: 12px;
 }
-.secondary_sponsors-content{
+.secondary_sponsors-content {
   display: flex;
   gap: 2rem;
   padding: 12px;
 }
-.principal_sponsors-content .sponsor_content
-{
+.principal_sponsors-content .sponsor_content {
   width: 150px;
   height: 150px;
 }
-.principal_sponsors-content .sponsor_content img{
+.principal_sponsors-content .sponsor_content img {
   width: 150px;
   height: 150px;
   object-fit: cover;
 }
-.secondary_sponsors-content .sponsor_content{
-width: 280px;
+.secondary_sponsors-content .sponsor_content {
+  width: 280px;
   height: 150px;
 }
-.secondary_sponsors-content .sponsor_content img{
+.secondary_sponsors-content .sponsor_content img {
   width: 280px;
   height: 150px;
   object-fit: cover;
 }
- /* 9. Footer Section  */
- footer{
+/* 9. Footer Section  */
+footer {
   background-color: var(--primary-color);
   width: 100%;
   padding: 18px;
- }
- .footer_top{
+}
+.footer_top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   border-bottom: 2px solid var(--secondary-color);
- }
- .footer_logo img{
+}
+.footer_logo img {
   height: 92px;
   height: 92px;
- }
- .footer-links,
- .footer-socials{
+}
+.footer-links,
+.footer-socials {
   display: flex;
   align-items: center;
- }
- .footer-links{
+}
+.footer-links {
   gap: 1rem;
- }
- .footer-socials{
+}
+.footer-socials {
   gap: 0.5rem;
- }
- .footer_link a{
+}
+.footer_link a {
   text-decoration: none;
   color: white;
- }
- .footer_link a:hover{
+}
+.footer_link a:hover {
   text-decoration: underline;
- }
-.footer_link a p{
+}
+.footer_link a p {
   font-size: 18.5px;
- }
- .icons{
+}
+.icons {
   width: 50px;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: rgba(234, 142, 72, 0.30);
-  transition: .2s ease-in;
- }
- .fa-brands{
+  background-color: rgba(234, 142, 72, 0.3);
+  transition: 0.2s ease-in;
+}
+.fa-brands {
   font-size: 24px;
   color: var(--secondary-color);
   cursor: pointer;
- }
- .icons:hover{
+}
+.icons:hover {
   background-color: var(--secondary-color);
- }
- .icons:hover .fa-brands{
+}
+.icons:hover .fa-brands {
   color: var(--primary-color);
- }
-.footer_bottom{
+}
+.footer_bottom {
   text-align: center;
   margin-top: 8px;
 }
-.footer_bottom p{
+.footer_bottom p {
   font-family: var(--main-font);
   color: var(--third-color);
 }

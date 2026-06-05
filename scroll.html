@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carousel-wrapper {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    /* hide scrollbar */
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    width: 500px;
+    height: 250px;
+    background: lightblue;
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+/* buttons */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* fixed positions */
+.left {
+    left: -20px; /* set exact position */
+}
+
+.right {
+    right: -20px; /* set exact position */
+}
+    </style>
+</head>
+<body>
+    <div class="carousel-wrapper">
+
+    <button class="scroll-btn left">
+        &#10094;
+    </button>
+
+    <div class="carousel" id="carousel">
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+        <div class="card">4</div>
+        <div class="card">5</div>
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+        <div class="card">4</div>
+        <div class="card">5</div>
+        
+    </div>
+
+    <button class="scroll-btn right">
+        &#10095;
+    </button>
+
+</div>
+
+<script>
+    const carousel = document.getElementById("carousel");
+
+document.querySelector(".right")
+.addEventListener("click", () => {
+    carousel.scrollBy({
+        left: 300,
+        behavior: "smooth"
+    });
+});
+
+document.querySelector(".left")
+.addEventListener("click", () => {
+    carousel.scrollBy({
+        left: -300,
+        behavior: "smooth"
+    });
+});
+</script>
+</body>
+</html>

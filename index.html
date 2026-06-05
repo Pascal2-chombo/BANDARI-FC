@@ -446,11 +446,10 @@
           <h2>Featured Collections</h2>
         </div>
       </div>
-      <div class="shop_container">
-        <div class="shop_wrapper">
-          <div class="shop_slide-btn__left">
-            <span>🡨</span>
-          </div>
+      <div class="shop_container" id="shopContainer">
+        <button class="shop_slide-btn__left" onclick="leftBtn()" id="leftShopButton"><span>🡨</span></button>
+        <div class="shop_wrapper" id="shopWrapper">
+            
           <div class="cards">
             <div class="cards_img">
               <img src="assets/images/allkits.png" alt="allkits">
@@ -507,10 +506,8 @@
               </div>
             </div>
           </div>
-          <div class="shop_slide-btn__right">
-            <span>🡪</span>
-          </div>
         </div>
+        <button class="shop_slide-btn__right" onclick="rightBtn()" id="rightShopButton"><span>🡪</span></button>
       </div>
     </section>
 
@@ -522,24 +519,77 @@
       </div>
       <div class="club_container">
         <div class="club_container-top">
-          <div class="club_container-top-content active">
+          <div class="club_container-top-content active" onclick="openHistory()" id="btn1">
             <h2>History</h2>
           </div>
-          <div class="club_container-top-content center">
+          <div class="club_container-top-content center" onclick="openTrophies()" id="btn2">
             <h2>Trophies</h2>
           </div>
-          <div class="club_container-top-content">
+          <div class="club_container-top-content" onclick="openStadium()" id="btn3">
             <h2>Stadium</h2>
           </div>
         </div>
-        <div class="club_container-bottom">
+        <div class="club_container-bottom history" id="history">
           <div class="club_container-bottom-left">
-            <!-- Content -->
+            <h2>Timeline:</h2>
+            <div class="history_content">
+              <h3>1960 - 1978: LASCO FC</h3>
+              <p>Bandari FC traces its roots to LASCO FC, founded in 1960, which marked the beginning of organized football linked to Mombasa's port community.</p>
+            </div>
+            <div class="history_content">
+              <h3>1978 - 1985: Cargo FC</h3>
+              <p>The club transitioned into Cargo FC in 1978, strengthening its football identity in the coastal region.</p>
+            </div>
+            <div class="history_content">
+              <h3>1985: Formation of Bandari FC</h3>
+              <p>In 1985, Cargo FC merged with the Kenya Ports Authority (KPA) football team to form Bandari FC, symbolizing its connection to the Port of Mombasa.</p>
+            </div>
+            <div class="history_content">
+              <h3>1999: Club Disbandment</h3>
+              <p>Following relegation and challenges, the club was temporarily disbanded in 1999.</p>
+            </div>
+            <div class="history_content">
+              <h3>2004: Club Revival</h3>
+              <p>Bandari FC was revived in 2004 by KPA and began rebuilding its place in Kenyan football.</p>
+            </div>
+            <div class="history_content">
+              <h3>2015 & 2019: Major Success</h3>
+              <p>The club won the FKF Shield Cup in 2015 and 2019, also lifting the Kenya Super Cup in 2019 and representing Kenya in the CAF Confederation Cup.</p>
+            </div>
+            
           </div>
           <div class="club_container-bottom-right">
-            <!-- Image -->
+            <img src="assets/images/BandariFC-Fans_.jpg" alt="fans">
           </div>
         </div>
+        <div class="club_container-bottom trophy" id="trophy">
+          <div class="club_container-bottom-left">
+            <h2>Trophies</h2>
+            <div class="trophies_content">
+              <h3>2015:</h3>
+              <p>FKF Shield Cup</p>
+            </div>
+            <div class="trophies_content">
+              <h3>2019:</h3>
+              <p>FKF Shield Cup & Kenya Super Cup</p>
+            </div>
+          </div>
+          <div class="club_container-bottom-right">
+            <img src="assets/images/trophycabinet.png" alt="trophy">
+          </div>
+        </div>
+        <div class="club_container-bottom stadium" id="stadium">
+          <div class="club_container-bottom-left">
+            <h2>MBARAKI STADIUM</h2>
+            <div class="stadium_content">
+              <p>Mbaraki Stadium is the proud home of Bandari FC, located in the coastal city of Mombasa, Kenya. Established to strengthen football development in the coastal region, the stadium was envisioned in 2014 and officially opened in 2021 after years of planning and construction. Inspired by Mombasa’s rich maritime heritage, the stadium symbolizes the ambition and growth of football on the Kenyan coast. Today, Mbaraki Stadium hosts Bandari FC matches, youth tournaments, and community sporting events, creating an unforgettable matchday atmosphere for fans.</p>
+            </div>
+          </div>
+          <div class="club_container-bottom-right">
+            <img src="assets/images/overviewstadium.png" alt="trophy">
+          </div>
+        </div>
+        
       </div>
     </section>
 
@@ -686,6 +736,63 @@
         }
       }
       setInterval(changeImages, 5000);
+
+      // Club Store
+
+           const shopWrapper = document.getElementById("shopWrapper");
+
+function rightBtn() {
+  shopWrapper.scrollBy({
+    left: 450,
+    behavior: "smooth"
+  });
+}
+
+function leftBtn() {
+  shopWrapper.scrollBy({
+    left: -450,
+    behavior: "smooth"
+  });
+}
+
+
+      // Club History/Trphies/Stadium
+
+      const btn1 = document.getElementById("btn1");
+      const btn2 = document.getElementById("btn2");
+      const btn3 = document.getElementById("btn3");
+      const history = document.getElementById("history");
+      const trophy = document.getElementById("trophy");
+      const stadium = document.getElementById("stadium");
+
+      function openHistory(){
+        history.style.display = "flex";
+        trophy.style.display = "none";
+        stadium.style.display = "none";
+        btn1.style.backgroundColor = "rgb(234, 142, 72)";
+        btn2.style.backgroundColor = "transparent";
+        btn3.style.backgroundColor = "transparent";
+        
+      }
+      function openTrophies(){
+        history.style.display = "none";
+        trophy.style.display = "flex";
+        stadium.style.display = "none";
+        btn1.style.backgroundColor = "transparent";
+        btn2.style.backgroundColor = "rgb(234, 142, 72)";
+        btn3.style.backgroundColor = "transparent";
+      }
+      function openStadium(){
+        history.style.display = "none";
+        trophy.style.display = "none";
+        stadium.style.display = "flex";
+        btn1.style.backgroundColor = "transparent";
+        btn2.style.backgroundColor = "transparent";
+        btn3.style.backgroundColor = "rgb(234, 142, 72)";
+      }
+      
+
+
     </script>
   </body>
 </html>
