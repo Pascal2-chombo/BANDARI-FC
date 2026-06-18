@@ -1205,6 +1205,24 @@ footer {
     height: 36px;
   }
 
+  /*  8. Sponsors Section */
+  .principal_sponsors-content .sponsor_content {
+    width: 130px;
+    height: 130px;
+  }
+  .principal_sponsors-content .sponsor_content img {
+    width: 130px;
+    height: 130px;
+  }
+  .secondary_sponsors-content .sponsor_content {
+    width: 250px;
+    height: 130px;
+  }
+  .secondary_sponsors-content .sponsor_content img {
+    width: 250px;
+    height: 130px;
+  }
+
   /*  9. Footer Section */
   .footer_logo img {
     height: 85px;
@@ -1330,11 +1348,42 @@ footer {
   .fixtures_container-right {
     width: 90%;
   }
+  /*  8. Sponsors Section */
+  .sponsors_header-title {
+  font-size: 42px;
+  font-family: var(--secondary-font);
+}
+.sponsors_header-title::before {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 6.5px;
+  background-color: var(--fifth-color);
+  margin-right: 16px;
+  vertical-align: middle;
+}
+  .principal_sponsors-content .sponsor_content {
+    width: 120px;
+    height: 120px;
+  }
+  .principal_sponsors-content .sponsor_content img {
+    width: 120px;
+    height: 120px;
+  }
+  .secondary_sponsors-content .sponsor_content {
+    width: 210px;
+    height: 120px;
+  }
+  .secondary_sponsors-content .sponsor_content img {
+    width: 210px;
+    height: 120px;
+  }
+
   /*  9. Footer Section */
   footer {
     padding: 14px;
   }
-  .footer_top{
+  .footer_top {
     padding: 6px;
   }
   .footer_logo img {
@@ -1504,11 +1553,33 @@ footer {
   .next_match {
     width: 95%;
   }
+
+  /*  8. Sponsors Section */
+    .sponsors_header-title {
+  font-size: 38px;
+  font-family: var(--secondary-font);
+}
+.sponsors_header-title::before {
+  content: "";
+  display: inline-block;
+  width: 75px;
+  height: 6.2px;
+  background-color: var(--fifth-color);
+  margin-right: 15px;
+  vertical-align: middle;
+}
+  .secondary_sponsors-content{
+    display: grid;
+    grid-template-columns: repeat(2, 210px);
+    grid-template-rows: repeat(2, 130px);
+    gap: .3rem;
+  }
+
   /*  9. Footer Section */
   footer {
     padding: 12px;
   }
-  .footer_top{
+  .footer_top {
     padding: 8px;
     flex-direction: column;
     gap: 0.8rem;
@@ -1533,7 +1604,7 @@ footer {
   .fa-brands {
     font-size: 22px;
   }
-  .footer_bottom p{
+  .footer_bottom p {
     font-size: 15px;
   }
 }
@@ -1655,11 +1726,49 @@ footer {
   .next_match {
     width: 95%;
   }
+
+   /*  8. Sponsors Section */
+       .sponsors_header-title {
+  font-size: 34px;
+  font-family: var(--secondary-font);
+}
+.sponsors_header-title::before {
+  content: "";
+  display: inline-block;
+  width: 70px;
+  height: 6px;
+  background-color: var(--fifth-color);
+  margin-right: 14px;
+  vertical-align: middle;
+}
+  .principal_sponsors-content .sponsor_content {
+    width: 100px;
+    height: 100px;
+  }
+  .principal_sponsors-content .sponsor_content img {
+    width: 100px;
+    height: 100px;
+  }
+  .secondary_sponsors-content .sponsor_content {
+    width: 180px;
+    height: 120px;
+  }
+  .secondary_sponsors-content .sponsor_content img {
+    width: 180px;
+    height: 120px;
+  }
+  .secondary_sponsors-content{
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: repeat(2, 120px);
+    gap: .4rem;
+  }
+
   /*  9. Footer Section */
   footer {
     padding: 8px;
   }
-  .footer_top{
+  .footer_top {
     padding: 5px;
     flex-direction: column;
     gap: 0.8rem;
@@ -1669,10 +1778,34 @@ footer {
     height: 62px;
   }
   .footer_link a p {
-    font-size: 12px;
+    font-size: 14.5px;
   }
   .footer-links {
-    gap: 0.4rem;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 112px);
+    grid-template-rows: repeat(3, 22px);
+    gap: 0.6rem;
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e e";
+  }
+  .link1 {
+    grid-area: a;
+  }
+  .link2 {
+    grid-area: b;
+  }
+  .link3 {
+    grid-area: c;
+  }
+  .link4 {
+    grid-area: d;
+  }
+  .link5 {
+    grid-area: e;
+    text-align: center;
   }
   .footer-socials {
     gap: 0.5rem;
@@ -1684,7 +1817,7 @@ footer {
   .fa-brands {
     font-size: 20px;
   }
-  .footer_bottom p{
+  .footer_bottom p {
     font-size: 14px;
   }
 }
@@ -1791,6 +1924,42 @@ footer {
     width: 95%;
   }
 
+  /*  8. Sponsors Section */
+         .sponsors_header-title {
+  font-size: 34px;
+  font-family: var(--secondary-font);
+}
+.sponsors_header-title::before {
+  content: "";
+  display: inline-block;
+  width: 70px;
+  height: 6px;
+  background-color: var(--fifth-color);
+  margin-right: 14px;
+  vertical-align: middle;
+}
+  .secondary_sponsors-content{
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    grid-template-rows: repeat(2, 100px);
+    gap: .4rem;
+  }
+  .principal_sponsors-content .sponsor_content {
+    width: 100px;
+    height: 100px;
+  }
+  .principal_sponsors-content .sponsor_content img {
+    width: 100px;
+    height: 100px;
+  }
+  .secondary_sponsors-content .sponsor_content {
+    width: 140px;
+    height: 100px;
+  }
+  .secondary_sponsors-content .sponsor_content img {
+    width: 140px;
+    height: 100px;
+  }
   /*  9. Footer Section */
   .footer_logo img {
     height: 58px;
