@@ -1334,6 +1334,9 @@ footer {
     font-size: 42px;
     font-family: var(--secondary-font);
   }
+  .latest_result-header{
+    gap: 2rem;
+  }
   .fixtures_title-container::before {
     content: "";
     display: inline-block;
@@ -1549,6 +1552,9 @@ footer {
     font-size: 38px;
     font-family: var(--secondary-font);
   }
+  .latest_result-header{
+    gap: 2rem;
+  }
   .fixtures_title-container::before {
     content: "";
     display: inline-block;
@@ -1759,6 +1765,9 @@ footer {
   .fixtures_title h2 {
     font-size: 34px;
     font-family: var(--secondary-font);
+  }
+   .latest_result-header{
+    gap: 2rem;
   }
   .fixtures_title-container::before {
     content: "";
@@ -2014,6 +2023,9 @@ footer {
   }
   .next_match {
     width: 95%;
+  }
+  .latest_result-header{
+    gap: 2.8rem;
   }
 
   /*  8. Sponsors Section */
