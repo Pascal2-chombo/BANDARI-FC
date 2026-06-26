@@ -33,7 +33,7 @@
 .player_header--content h2 {
   font-family: var(--secondary-font);
 }
-.players h2 {
+.player_header--main h2 {
   font-size: 64px;
 }
 .main_sponser {
@@ -68,4 +68,65 @@
   width: 100%;
   height: 1.5px;
   background-color: black;
+}
+.goalkeepers h4,
+.defenders h4,
+.midfielders h4,
+.forwards h4{
+  font-family: var(--secondary-font);
+  font-size: 40px;
+}
+.goalkeepers,
+.defenders ,
+.midfielders ,
+.forwards {
+  padding: 40px;
+}
+.midfielders_wrapper,
+.goalkeepers_wrapper,
+.defenders_wrapper,
+.forwards_wrapper{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 10px;
+}
+
+.players{
+  position: relative;
+  width: 100%;
+  height: 565px;
+  background-color: chocolate;
+  border-radius: 12px;
+  padding: 10px;
+}
+.player_number,
+.player_nation,
+.player_name{
+  position: absolute;
+}
+.player_number{
+  top: 10px;
+  left: 10px;
+}
+.player_number h2{
+  font-size: 52px;
+}
+.player_nation{
+  width: 55px;
+  height: 55px;
+  top: 18%;
+  right: 10px;
+}
+.player_nation img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.player_name{
+  bottom: 30px;
+  width: 90%;
+}
+.player_name h4{
+  text-align: center;
 }
