@@ -130,10 +130,16 @@
                 </div>
             </div>
         </div>
-        <div class="goalkeepers">
+        <div class="goalkeepers">         
           <div class="goalkeepers_header">
-            <h4>Goalkeppers</h4>
-          </div>
+             <div>
+              <h4>Goalkeppers</h4>
+             </div>
+             <div class="scroll_buttons">
+               <button class="squad_slide-btn__left" onclick="leftBtn()" id="leftSquadButton"><span>🡨</span></button>
+               <button class="squad_slide-btn__right" onclick="rightBtn()" id="rightSquadButton"><span>🡪</span></button>
+             </div>
+           </div>
           <div class="goalkeepers_wrapper">
             <div class="players">
               <div class="player_wrapper">
@@ -179,9 +185,15 @@
         </div>
         <div class="defenders">
           <div class="defenders_header">
-            <h4>Defenders</h4>
+            <div>
+              <h4>Defenders</h4>
+             </div>
+             <div class="scroll_buttons">
+               <button class="squad_slide-btn__left" onclick="leftBtn()" id="leftSquadButton"><span>🡨</span></button>
+               <button class="squad_slide-btn__right" onclick="rightBtn()" id="rightSquadButton"><span>🡪</span></button>
+             </div>
           </div>
-          <div class="defenders_wrapper">
+          <div class="defenders_wrapper" id="squadWrapper">
             <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
@@ -278,7 +290,13 @@
         </div>
         <div class="midfielders">
           <div class="midfielders_header">
-            <h4>Midfielders</h4>
+            <div>
+              <h4>Midfielders</h4>
+             </div>
+             <div class="scroll_buttons">
+               <button class="squad_slide-btn__left" onclick="leftBtn()" id="leftSquadButton"><span>🡨</span></button>
+               <button class="squad_slide-btn__right" onclick="rightBtn()" id="rightSquadButton"><span>🡪</span></button>
+             </div>
           </div>
           <div class="midfielders_wrapper">
             <div class="players">
@@ -358,9 +376,15 @@
         </div>
         <div class="forwards">
           <div class="forwards_header">
-            <h4>Forwards</h4>
+            <div>
+              <h4>Forwards</h4>
+             </div>
+             <div class="scroll_buttons">
+               <button class="squad_slide-btn__left" onclick="leftBtn()" id="leftSquadButton"><span>🡨</span></button>
+               <button class="squad_slide-btn__right" onclick="rightBtn()" id="rightSquadButton"><span>🡪</span></button>
+             </div>
           </div>
-          <div class="forwards_wrapper">
+          <div class="forwards_wrapper" >
             <div class="players"></div>
             <div class="players"></div>
             <div class="players"></div>
@@ -372,4 +396,22 @@
         </div>
      </section>
   </body>
+
+  <script>
+  const squadWrapper = document.getElementById("squadWrapper");
+
+  function rightBtn() {
+  squadWrapper.scrollBy({
+    left: 295,
+    behavior: "smooth"
+  });
+}
+
+  function leftBtn() {
+  squadWrapper.scrollBy({
+    left: -265,
+    behavior: "smooth"
+  });
+}
+  </script>
 </html>

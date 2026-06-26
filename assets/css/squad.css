@@ -130,3 +130,135 @@
 .player_name h4{
   text-align: center;
 }
+.scroll_buttons{
+  display: none;
+}
+@media (max-width: 1487px) {
+  .goalkeepers,
+.defenders ,
+.midfielders ,
+.forwards {
+  padding: 40px;
+}
+.midfielders_wrapper,
+.goalkeepers_wrapper,
+.defenders_wrapper,
+.forwards_wrapper{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 10px;
+}
+.players{
+  position: relative;
+  width: 100%;
+  height: 565px;
+  background-color: chocolate;
+  border-radius: 12px;
+  padding: 10px;
+}
+@media (max-width: 1250px) {
+  .goalkeepers,
+.defenders ,
+.midfielders ,
+.forwards {
+  padding: 40px;
+}
+.midfielders_wrapper,
+.goalkeepers_wrapper,
+.defenders_wrapper,
+.forwards_wrapper{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 10px;
+}
+.players{
+  position: relative;
+  width: 100%;
+  height: 465px;
+  background-color: chocolate;
+  border-radius: 12px;
+  padding: 10px;
+}
+}}
+
+@media (max-width: 1150px) {
+  .goalkeepers,
+.defenders ,
+.midfielders ,
+.forwards {
+  position: relative;
+  padding: 40px;
+}
+.midfielders_wrapper,
+.goalkeepers_wrapper,
+.defenders_wrapper,
+.forwards_wrapper{
+  display: flex;
+  gap: 2rem;
+  padding: 10px;
+
+}
+.midfielders_wrapper,
+.defenders_wrapper,
+.forwards_wrapper{
+  width: auto;
+  overflow-x: auto;
+}
+.midfielders_wrapper::-webkit-scrollbar,
+.defenders_wrapper::-webkit-scrollbar,
+.forwards_wrapper::-webkit-scrollbar{
+  display: none;
+}
+.players{
+  flex: 0 0 280px;
+  position: relative;
+  height: 320px;
+  background-color: chocolate;
+  border-radius: 12px;
+  padding: 10px;
+}
+.goalkeepers_header,
+.defenders_header,
+.midfielders_header,
+.forwards_header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.scroll_buttons{
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.squad_slide-btn__left,
+.squad_slide-btn__right {
+    width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+.squad_slide-btn__left span,
+.squad_slide-btn__right span {
+  font-size: 28px;
+}
+
+}
+
+@media (max-width: 785px) {
+
+}
+
+@media (max-width: 412px) {
+
+}
+
+@media (max-width: 360px) {
+
+}
