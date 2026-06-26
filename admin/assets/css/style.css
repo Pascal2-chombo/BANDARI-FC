@@ -16,6 +16,7 @@
   box-sizing: border-box;
   font-family: var(--main-font), sans-serif;
 }
+/* 1. Side Bar Menu */
 .sidebar_container {
   position: fixed;
   width: 20vw;
@@ -23,6 +24,17 @@
   background-color: var(--primary-color);
   z-index: 999;
 }
+.sidebar_top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+.sidebar_top img{
+  width: 88px;
+  height: 90%;
+}
+/* 2. Main Content */
 .main_container {
   position: absolute;
   right: 0;
