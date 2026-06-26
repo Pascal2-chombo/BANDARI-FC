@@ -135,10 +135,10 @@
              <div>
               <h4>Goalkeppers</h4>
              </div>
-             <div class="scroll_buttons">
+             <!-- <div class="scroll_buttons">
                <button class="squad_slide-btn__left" onclick="leftBtn()" id="leftSquadButton"><span>🡨</span></button>
                <button class="squad_slide-btn__right" onclick="rightBtn()" id="rightSquadButton"><span>🡪</span></button>
-             </div>
+             </div> -->
            </div>
           <div class="goalkeepers_wrapper">
             <div class="players">
@@ -189,11 +189,11 @@
               <h4>Defenders</h4>
              </div>
              <div class="scroll_buttons">
-               <button class="squad_slide-btn__left" onclick="leftBtn()" id="leftSquadButton"><span>🡨</span></button>
-               <button class="squad_slide-btn__right" onclick="rightBtn()" id="rightSquadButton"><span>🡪</span></button>
+               <button class="squad_slide-btn__left" onclick="dfleftBtn()" id="leftSquadButton"><span>🡨</span></button>
+               <button class="squad_slide-btn__right" onclick="dfrightBtn()" id="rightSquadButton"><span>🡪</span></button>
              </div>
           </div>
-          <div class="defenders_wrapper" id="squadWrapper">
+          <div class="defenders_wrapper" id="defenderWrapper">
             <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
@@ -294,11 +294,11 @@
               <h4>Midfielders</h4>
              </div>
              <div class="scroll_buttons">
-               <button class="squad_slide-btn__left" onclick="leftBtn()" id="leftSquadButton"><span>🡨</span></button>
-               <button class="squad_slide-btn__right" onclick="rightBtn()" id="rightSquadButton"><span>🡪</span></button>
+               <button class="squad_slide-btn__left" onclick="mfleftBtn()" id="leftSquadButton"><span>🡨</span></button>
+               <button class="squad_slide-btn__right" onclick="mfrightBtn()" id="rightSquadButton"><span>🡪</span></button>
              </div>
           </div>
-          <div class="midfielders_wrapper">
+          <div class="midfielders_wrapper" id="midfieldWrapper">
             <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
@@ -380,11 +380,11 @@
               <h4>Forwards</h4>
              </div>
              <div class="scroll_buttons">
-               <button class="squad_slide-btn__left" onclick="leftBtn()" id="leftSquadButton"><span>🡨</span></button>
-               <button class="squad_slide-btn__right" onclick="rightBtn()" id="rightSquadButton"><span>🡪</span></button>
+               <button class="squad_slide-btn__left" onclick="fwleftBtn()" id="leftSquadButton"><span>🡨</span></button>
+               <button class="squad_slide-btn__right" onclick="fwrightBtn()" id="rightSquadButton"><span>🡪</span></button>
              </div>
           </div>
-          <div class="forwards_wrapper" >
+          <div class="forwards_wrapper" id="forwardWrapper">
             <div class="players"></div>
             <div class="players"></div>
             <div class="players"></div>
@@ -398,20 +398,49 @@
   </body>
 
   <script>
-  const squadWrapper = document.getElementById("squadWrapper");
 
-  function rightBtn() {
-  squadWrapper.scrollBy({
+    lucide.createIcons();
+
+  const defenderWrapper = document.getElementById("defenderWrapper");
+  const midfieldWrapper = document.getElementById("midfieldWrapper");
+  const forwardWrapper = document.getElementById("forwardWrapper");
+
+  function dfrightBtn() {
+  defenderWrapper.scrollBy({
     left: 295,
     behavior: "smooth"
   });
 }
-
-  function leftBtn() {
-  squadWrapper.scrollBy({
-    left: -265,
+function mfrightBtn(){
+  midfieldWrapper.scrollBy({
+    left: 295,
     behavior: "smooth"
   });
 }
+function fwrightBtn(){
+   forwardWrapper.scrollBy({
+    left: 295,
+    behavior: "smooth"
+  });
+}
+  function dfleftBtn() {
+  defenderWrapper.scrollBy({
+    left: -295,
+    behavior: "smooth"
+  });
+}
+function mfleftBtn(){
+  midfieldWrapper.scrollBy({
+    left: -295,
+    behavior: "smooth"
+  });
+}
+function fwleftBtn(){
+   forwardWrapper.scrollBy({
+    left: -295,
+    behavior: "smooth"
+  });
+}
+
   </script>
 </html>

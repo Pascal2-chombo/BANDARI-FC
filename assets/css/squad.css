@@ -72,27 +72,27 @@
 .goalkeepers h4,
 .defenders h4,
 .midfielders h4,
-.forwards h4{
+.forwards h4 {
   font-family: var(--secondary-font);
   font-size: 40px;
 }
 .goalkeepers,
-.defenders ,
-.midfielders ,
+.defenders,
+.midfielders,
 .forwards {
   padding: 40px;
 }
 .midfielders_wrapper,
 .goalkeepers_wrapper,
 .defenders_wrapper,
-.forwards_wrapper{
+.forwards_wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   padding: 10px;
 }
 
-.players{
+.players {
   position: relative;
   width: 100%;
   height: 565px;
@@ -102,163 +102,236 @@
 }
 .player_number,
 .player_nation,
-.player_name{
+.player_name {
   position: absolute;
 }
-.player_number{
+.player_number {
   top: 10px;
   left: 10px;
 }
-.player_number h2{
+.player_number h2 {
   font-size: 52px;
 }
-.player_nation{
+.player_nation {
   width: 55px;
   height: 55px;
   top: 18%;
   right: 10px;
 }
-.player_nation img{
+.player_nation img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-.player_name{
+.player_name {
   bottom: 30px;
   width: 90%;
 }
-.player_name h4{
+.player_name h4 {
   text-align: center;
 }
-.scroll_buttons{
+.scroll_buttons {
   display: none;
 }
 @media (max-width: 1487px) {
   .goalkeepers,
-.defenders ,
-.midfielders ,
-.forwards {
-  padding: 40px;
+  .defenders,
+  .midfielders,
+  .forwards {
+    padding: 40px;
+  }
+  .midfielders_wrapper,
+  .goalkeepers_wrapper,
+  .defenders_wrapper,
+  .forwards_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 10px;
+  }
+  .players {
+    position: relative;
+    width: 100%;
+    height: 565px;
+    background-color: chocolate;
+    border-radius: 12px;
+    padding: 10px;
+  }
+  @media (max-width: 1250px) {
+    .goalkeepers,
+    .defenders,
+    .midfielders,
+    .forwards {
+      padding: 40px;
+    }
+    .midfielders_wrapper,
+    .goalkeepers_wrapper,
+    .defenders_wrapper,
+    .forwards_wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 10px;
+    }
+    .players {
+      position: relative;
+      width: 100%;
+      height: 465px;
+      background-color: chocolate;
+      border-radius: 12px;
+      padding: 10px;
+    }
+  }
 }
-.midfielders_wrapper,
-.goalkeepers_wrapper,
-.defenders_wrapper,
-.forwards_wrapper{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 10px;
-}
-.players{
-  position: relative;
-  width: 100%;
-  height: 565px;
-  background-color: chocolate;
-  border-radius: 12px;
-  padding: 10px;
-}
-@media (max-width: 1250px) {
-  .goalkeepers,
-.defenders ,
-.midfielders ,
-.forwards {
-  padding: 40px;
-}
-.midfielders_wrapper,
-.goalkeepers_wrapper,
-.defenders_wrapper,
-.forwards_wrapper{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 10px;
-}
-.players{
-  position: relative;
-  width: 100%;
-  height: 465px;
-  background-color: chocolate;
-  border-radius: 12px;
-  padding: 10px;
-}
-}}
 
 @media (max-width: 1150px) {
   .goalkeepers,
-.defenders ,
-.midfielders ,
-.forwards {
-  position: relative;
-  padding: 40px;
-}
-.midfielders_wrapper,
-.goalkeepers_wrapper,
-.defenders_wrapper,
-.forwards_wrapper{
-  display: flex;
-  gap: 2rem;
-  padding: 10px;
-
-}
-.midfielders_wrapper,
-.defenders_wrapper,
-.forwards_wrapper{
-  width: auto;
-  overflow-x: auto;
-}
-.midfielders_wrapper::-webkit-scrollbar,
-.defenders_wrapper::-webkit-scrollbar,
-.forwards_wrapper::-webkit-scrollbar{
-  display: none;
-}
-.players{
-  flex: 0 0 280px;
-  position: relative;
-  height: 320px;
-  background-color: chocolate;
-  border-radius: 12px;
-  padding: 10px;
-}
-.goalkeepers_header,
-.defenders_header,
-.midfielders_header,
-.forwards_header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.scroll_buttons{
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-}
-.squad_slide-btn__left,
-.squad_slide-btn__right {
+  .defenders,
+  .midfielders,
+  .forwards {
+    position: relative;
+    padding: 40px;
+  }
+  .midfielders_wrapper,
+  .goalkeepers_wrapper,
+  .defenders_wrapper,
+  .forwards_wrapper {
+    display: flex;
+    gap: 2rem;
+    padding: 10px;
+  }
+  .midfielders_wrapper,
+  .defenders_wrapper,
+  .forwards_wrapper {
+    width: auto;
+    overflow-x: auto;
+  }
+  .midfielders_wrapper::-webkit-scrollbar,
+  .defenders_wrapper::-webkit-scrollbar,
+  .forwards_wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .players {
+    flex: 0 0 280px;
+    position: relative;
+    height: 320px;
+    background-color: chocolate;
+    border-radius: 12px;
+    padding: 10px;
+  }
+  .goalkeepers_header,
+  .defenders_header,
+  .midfielders_header,
+  .forwards_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .scroll_buttons {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .squad_slide-btn__left,
+  .squad_slide-btn__right {
     width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--secondary-color);
-  border-radius: 8px;
-  cursor: pointer;
-  border: none;
-}
-.squad_slide-btn__left span,
-.squad_slide-btn__right span {
-  font-size: 28px;
-}
-
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+  }
+  .squad_slide-btn__left span,
+  .squad_slide-btn__right span {
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 785px) {
-
 }
 
 @media (max-width: 412px) {
-
 }
 
 @media (max-width: 360px) {
-
+  .player_header--content {
+  padding: 12px 16px;
+}
+.player_header--content h2 {
+  font-family: var(--secondary-font);
+}
+.player_header--main h2 {
+  font-size: 34px;
+}
+.main_sponser {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.main_sponser img {
+  width: 48px;
+}
+  .goalkeepers,
+  .defenders,
+  .midfielders,
+  .forwards {
+    position: relative;
+    padding: 20px;
+  }
+  .midfielders_wrapper,
+  .goalkeepers_wrapper,
+  .defenders_wrapper,
+  .forwards_wrapper {
+    display: flex;
+    gap: 2rem;
+    padding: 10px;
+      width: auto;
+    overflow-x: auto;
+  }
+  .goalkeepers_wrapper::-webkit-scrollbar,
+  .midfielders_wrapper::-webkit-scrollbar,
+  .defenders_wrapper::-webkit-scrollbar,
+  .forwards_wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .players {
+    flex: 0 0 280px;
+    position: relative;
+    height: 320px;
+    background-color: chocolate;
+    border-radius: 12px;
+    padding: 10px;
+  }
+  .goalkeepers_header,
+  .defenders_header,
+  .midfielders_header,
+  .forwards_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .scroll_buttons {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .squad_slide-btn__left,
+  .squad_slide-btn__right {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+  }
+  .squad_slide-btn__left span,
+  .squad_slide-btn__right span {
+    font-size: 28px;
+  }
 }
