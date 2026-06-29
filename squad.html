@@ -7,10 +7,15 @@
     <!-- 1. NavBar -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- 2. Squad Style -->
-     <link rel="stylesheet" href="assets/css/squad.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/squad.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    
   </head>
   <body>
     <!-- Navigation bar section -->
@@ -108,38 +113,35 @@
       </div>
     </nav>
     <!-- 2. INTRO Section -->
-     <section>
-        <div class="player_header">
-            <div class="player_header--content">
-                <div class="player_header--main">
-                    <h2>Players</h2>
-                </div>
-                <div class="main_sponser">
-                    <h2>Brought to you by</h2>
-                    <img src="assets/images/adidas2.jpeg" alt="addiaslogo">
-                </div>
-            </div>
-            <div class="players_category">
-                <div class="category_wrapper">
-                    <div class="mens_team">
-                        <h3>Men's Team</h3>
-                    </div>
-                    <div class="u21_team">
-                        <h3>U21 Team</h3>
-                    </div>
-                </div>
-            </div>
+    <section>
+      <div class="player_header">
+        <div class="player_header--content">
+          <div class="player_header--main">
+            <h2>Players</h2>
+          </div>
+          <div class="main_sponser">
+            <h2>Brought to you by</h2>
+            <img src="assets/images/adidas2.jpeg" alt="addiaslogo" />
+          </div>
         </div>
-        <div class="goalkeepers">         
+        <div class="players_category">
+          <div class="category_wrapper">
+            <div class="mens_team">
+              <h3 onclick="mensTeam()">Men's Team</h3>
+            </div>
+            <div class="u21_team">
+              <h3 onclick="u21Team()">U21 Team</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mens_team--section">
+        <div class="goalkeepers">
           <div class="goalkeepers_header">
-             <div>
+            <div>
               <h4>Goalkeppers</h4>
-             </div>
-             <!-- <div class="scroll_buttons">
-               <button class="squad_slide-btn__left" onclick="leftBtn()" id="leftSquadButton"><span>🡨</span></button>
-               <button class="squad_slide-btn__right" onclick="rightBtn()" id="rightSquadButton"><span>🡪</span></button>
-             </div> -->
-           </div>
+            </div>
+          </div>
           <div class="goalkeepers_wrapper">
             <div class="players">
               <div class="player_wrapper">
@@ -147,7 +149,7 @@
                   <h2>25</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/tanzaniaflag.jpeg" alt="">
+                  <img src="assets/images/tanzaniaflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>James Omusinde</h4>
@@ -160,7 +162,7 @@
                   <h2>33</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/kenyanflag.jpeg" alt="">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>Darius Mnyambo</h4>
@@ -173,25 +175,36 @@
                   <h2>32</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/kenyanflag.jpeg" alt="">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>Levis Opiyo</h4>
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
         <div class="defenders">
           <div class="defenders_header">
             <div>
               <h4>Defenders</h4>
-             </div>
-             <div class="scroll_buttons">
-               <button class="squad_slide-btn__left" onclick="dfleftBtn()" id="leftSquadButton"><span>🡨</span></button>
-               <button class="squad_slide-btn__right" onclick="dfrightBtn()" id="rightSquadButton"><span>🡪</span></button>
-             </div>
+            </div>
+            <div class="scroll_buttons">
+              <button
+                class="squad_slide-btn__left"
+                onclick="dfleftBtn()"
+                id="leftSquadButton"
+              >
+                <span>🡨</span>
+              </button>
+              <button
+                class="squad_slide-btn__right"
+                onclick="dfrightBtn()"
+                id="rightSquadButton"
+              >
+                <span>🡪</span>
+              </button>
+            </div>
           </div>
           <div class="defenders_wrapper" id="defenderWrapper">
             <div class="players">
@@ -200,103 +213,114 @@
                   <h2>5</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/kenyanflag.jpeg" alt="">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>Shariff Amubwombe</h4>
                 </div>
               </div>
             </div>
-          <div class="players">
+            <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
                   <h2>66</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/kenyanflag.jpeg" alt="">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>Omar Omari</h4>
                 </div>
               </div>
             </div>
-          <div class="players">
+            <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
                   <h2>6</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/kenyanflag.jpeg" alt="">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>Joseph Onyango</h4>
                 </div>
               </div>
             </div>
-          <div class="players">
+            <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
                   <h2>3</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/kenyanflag.jpeg" alt="">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>Dennis Njire</h4>
                 </div>
               </div>
             </div>
-          <div class="players">
+            <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
                   <h2>29</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/kenyanflag.jpeg" alt="">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>Andrew Juma</h4>
                 </div>
               </div>
             </div>
-          <div class="players">
+            <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
                   <h2>5</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/kenyanflag.jpeg" alt="">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>Micah Nyambu</h4>
                 </div>
               </div>
             </div>
-          <div class="players">
+            <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
                   <h2>12</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/kenyanflag.jpeg" alt="">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>Fransic Andala</h4>
                 </div>
               </div>
             </div>
-          
           </div>
         </div>
         <div class="midfielders">
           <div class="midfielders_header">
             <div>
               <h4>Midfielders</h4>
-             </div>
-             <div class="scroll_buttons">
-               <button class="squad_slide-btn__left" onclick="mfleftBtn()" id="leftSquadButton"><span>🡨</span></button>
-               <button class="squad_slide-btn__right" onclick="mfrightBtn()" id="rightSquadButton"><span>🡪</span></button>
-             </div>
+            </div>
+            <div class="scroll_buttons">
+              <button
+                class="squad_slide-btn__left"
+                onclick="mfleftBtn()"
+                id="leftSquadButton"
+              >
+                <span>🡨</span>
+              </button>
+              <button
+                class="squad_slide-btn__right"
+                onclick="mfrightBtn()"
+                id="rightSquadButton"
+              >
+                <span>🡪</span>
+              </button>
+            </div>
           </div>
           <div class="midfielders_wrapper" id="midfieldWrapper">
             <div class="players">
@@ -305,67 +329,72 @@
                   <h2>18</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/kenyanflag.jpeg" alt="">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>Clifford Otieno</h4>
                 </div>
               </div>
-            </div><div class="players">
+            </div>
+            <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
                   <h2>25</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/ugandaflag.jpeg" alt="">
+                  <img src="assets/images/ugandaflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>Jackson Dwang</h4>
                 </div>
               </div>
-            </div><div class="players">
+            </div>
+            <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
                   <h2>27</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/kenyanflag.jpeg" alt="">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>Geoffrey Ojunga</h4>
                 </div>
               </div>
-            </div><div class="players">
+            </div>
+            <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
                   <h2>44</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/tanzaniaflag.jpeg" alt="">
+                  <img src="assets/images/tanzaniaflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>Hamisi Mwaphalu</h4>
                 </div>
               </div>
-            </div><div class="players">
+            </div>
+            <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
                   <h2>4</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/kenyanflag.jpeg" alt="">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>Brian Odera</h4>
                 </div>
               </div>
-            </div><div class="players">
+            </div>
+            <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
                   <h2>15</h2>
                 </div>
                 <div class="player_nation">
-                  <img src="assets/images/kenyanflag.jpeg" alt="">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
                 </div>
                 <div class="player_name">
                   <h4>William Gitama</h4>
@@ -378,11 +407,23 @@
           <div class="forwards_header">
             <div>
               <h4>Forwards</h4>
-             </div>
-             <div class="scroll_buttons">
-               <button class="squad_slide-btn__left" onclick="fwleftBtn()" id="leftSquadButton"><span>🡨</span></button>
-               <button class="squad_slide-btn__right" onclick="fwrightBtn()" id="rightSquadButton"><span>🡪</span></button>
-             </div>
+            </div>
+            <div class="scroll_buttons">
+              <button
+                class="squad_slide-btn__left"
+                onclick="fwleftBtn()"
+                id="leftSquadButton"
+              >
+                <span>🡨</span>
+              </button>
+              <button
+                class="squad_slide-btn__right"
+                onclick="fwrightBtn()"
+                id="rightSquadButton"
+              >
+                <span>🡪</span>
+              </button>
+            </div>
           </div>
           <div class="forwards_wrapper" id="forwardWrapper">
             <div class="players"></div>
@@ -394,53 +435,373 @@
             <div class="players"></div>
           </div>
         </div>
-     </section>
+      </div>
+      <div class="u21_team--section">
+        <div class="goalkeepers">
+          <div class="goalkeepers_header">
+            <div>
+              <h4>Goalkeppers</h4>
+            </div>
+          </div>
+          <div class="goalkeepers_wrapper">
+            <div class="players">
+              <div class="player_wrapper">
+                <div class="player_number">
+                  <h2>1</h2>
+                </div>
+                <div class="player_nation">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
+                </div>
+                <div class="player_name">
+                  <h4>Juma Hamisi</h4>
+                </div>
+              </div>
+            </div>
+            <div class="players">
+              <div class="player_wrapper">
+                <div class="player_number">
+                  <h2>26</h2>
+                </div>
+                <div class="player_nation">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
+                </div>
+                <div class="player_name">
+                  <h4>Julios Mcharo</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="defenders">
+          <div class="defenders_header">
+            <div>
+              <h4>Defenders</h4>
+            </div>
+            <div class="scroll_buttons">
+              <button
+                class="squad_slide-btn__left"
+                onclick="dfleftBtn()"
+                id="leftSquadButton"
+              >
+                <span>🡨</span>
+              </button>
+              <button
+                class="squad_slide-btn__right"
+                onclick="dfrightBtn()"
+                id="rightSquadButton"
+              >
+                <span>🡪</span>
+              </button>
+            </div>
+          </div>
+          <div class="defenders_wrapper" id="defenderWrapper">
+            <div class="players">
+              <div class="player_wrapper">
+                <div class="player_number">
+                  <h2>5</h2>
+                </div>
+                <div class="player_nation">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
+                </div>
+                <div class="player_name">
+                  <h4>Shariff Amubwombe</h4>
+                </div>
+              </div>
+            </div>
+            <div class="players">
+              <div class="player_wrapper">
+                <div class="player_number">
+                  <h2>66</h2>
+                </div>
+                <div class="player_nation">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
+                </div>
+                <div class="player_name">
+                  <h4>Omar Omari</h4>
+                </div>
+              </div>
+            </div>
+            <div class="players">
+              <div class="player_wrapper">
+                <div class="player_number">
+                  <h2>6</h2>
+                </div>
+                <div class="player_nation">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
+                </div>
+                <div class="player_name">
+                  <h4>Joseph Onyango</h4>
+                </div>
+              </div>
+            </div>
+            <div class="players">
+              <div class="player_wrapper">
+                <div class="player_number">
+                  <h2>3</h2>
+                </div>
+                <div class="player_nation">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
+                </div>
+                <div class="player_name">
+                  <h4>Dennis Njire</h4>
+                </div>
+              </div>
+            </div>
+            <div class="players">
+              <div class="player_wrapper">
+                <div class="player_number">
+                  <h2>29</h2>
+                </div>
+                <div class="player_nation">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
+                </div>
+                <div class="player_name">
+                  <h4>Andrew Juma</h4>
+                </div>
+              </div>
+            </div>
+            <div class="players">
+              <div class="player_wrapper">
+                <div class="player_number">
+                  <h2>5</h2>
+                </div>
+                <div class="player_nation">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
+                </div>
+                <div class="player_name">
+                  <h4>Micah Nyambu</h4>
+                </div>
+              </div>
+            </div>
+            <div class="players">
+              <div class="player_wrapper">
+                <div class="player_number">
+                  <h2>12</h2>
+                </div>
+                <div class="player_nation">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
+                </div>
+                <div class="player_name">
+                  <h4>Fransic Andala</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="midfielders">
+          <div class="midfielders_header">
+            <div>
+              <h4>Midfielders</h4>
+            </div>
+            <div class="scroll_buttons">
+              <button
+                class="squad_slide-btn__left"
+                onclick="mfleftBtn()"
+                id="leftSquadButton"
+              >
+                <span>🡨</span>
+              </button>
+              <button
+                class="squad_slide-btn__right"
+                onclick="mfrightBtn()"
+                id="rightSquadButton"
+              >
+                <span>🡪</span>
+              </button>
+            </div>
+          </div>
+          <div class="midfielders_wrapper" id="midfieldWrapper">
+            <div class="players">
+              <div class="player_wrapper">
+                <div class="player_number">
+                  <h2>18</h2>
+                </div>
+                <div class="player_nation">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
+                </div>
+                <div class="player_name">
+                  <h4>Clifford Otieno</h4>
+                </div>
+              </div>
+            </div>
+            <div class="players">
+              <div class="player_wrapper">
+                <div class="player_number">
+                  <h2>25</h2>
+                </div>
+                <div class="player_nation">
+                  <img src="assets/images/ugandaflag.jpeg" alt="" />
+                </div>
+                <div class="player_name">
+                  <h4>Jackson Dwang</h4>
+                </div>
+              </div>
+            </div>
+            <div class="players">
+              <div class="player_wrapper">
+                <div class="player_number">
+                  <h2>27</h2>
+                </div>
+                <div class="player_nation">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
+                </div>
+                <div class="player_name">
+                  <h4>Geoffrey Ojunga</h4>
+                </div>
+              </div>
+            </div>
+            <div class="players">
+              <div class="player_wrapper">
+                <div class="player_number">
+                  <h2>44</h2>
+                </div>
+                <div class="player_nation">
+                  <img src="assets/images/tanzaniaflag.jpeg" alt="" />
+                </div>
+                <div class="player_name">
+                  <h4>Hamisi Mwaphalu</h4>
+                </div>
+              </div>
+            </div>
+            <div class="players">
+              <div class="player_wrapper">
+                <div class="player_number">
+                  <h2>4</h2>
+                </div>
+                <div class="player_nation">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
+                </div>
+                <div class="player_name">
+                  <h4>Brian Odera</h4>
+                </div>
+              </div>
+            </div>
+            <div class="players">
+              <div class="player_wrapper">
+                <div class="player_number">
+                  <h2>15</h2>
+                </div>
+                <div class="player_nation">
+                  <img src="assets/images/kenyanflag.jpeg" alt="" />
+                </div>
+                <div class="player_name">
+                  <h4>William Gitama</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="forwards">
+          <div class="forwards_header">
+            <div>
+              <h4>Forwards</h4>
+            </div>
+            <div class="scroll_buttons">
+              <button
+                class="squad_slide-btn__left"
+                onclick="fwleftBtn()"
+                id="leftSquadButton"
+              >
+                <span>🡨</span>
+              </button>
+              <button
+                class="squad_slide-btn__right"
+                onclick="fwrightBtn()"
+                id="rightSquadButton"
+              >
+                <span>🡪</span>
+              </button>
+            </div>
+          </div>
+          <div class="forwards_wrapper" id="forwardWrapper">
+            <div class="players"></div>
+            <div class="players"></div>
+            <div class="players"></div>
+            <div class="players"></div>
+            <div class="players"></div>
+            <div class="players"></div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 
   <script>
-
     lucide.createIcons();
 
-  const defenderWrapper = document.getElementById("defenderWrapper");
-  const midfieldWrapper = document.getElementById("midfieldWrapper");
-  const forwardWrapper = document.getElementById("forwardWrapper");
+    // To enable dropdown for navbar on signIn
+    const navDropdownSide = document.getElementById("navDropdownSide");
+    const navDropdownMain = document.getElementById("navDropdownMain");
 
-  function dfrightBtn() {
-  defenderWrapper.scrollBy({
-    left: 295,
-    behavior: "smooth"
-  });
-}
-function mfrightBtn(){
-  midfieldWrapper.scrollBy({
-    left: 295,
-    behavior: "smooth"
-  });
-}
-function fwrightBtn(){
-   forwardWrapper.scrollBy({
-    left: 295,
-    behavior: "smooth"
-  });
-}
-  function dfleftBtn() {
-  defenderWrapper.scrollBy({
-    left: -295,
-    behavior: "smooth"
-  });
-}
-function mfleftBtn(){
-  midfieldWrapper.scrollBy({
-    left: -295,
-    behavior: "smooth"
-  });
-}
-function fwleftBtn(){
-   forwardWrapper.scrollBy({
-    left: -295,
-    behavior: "smooth"
-  });
-}
+    function showDropdown() {
+      navDropdownSide.classList.toggle("active");
+    }
+    function showDropdownMain() {
+      navDropdownMain.classList.toggle("active");
+    }
+
+    // This is to enable sidebar for smaller divices.
+    function showSidebar() {
+      const sidebar = document.querySelector(`.sidebar`);
+      if (sidebar.style.display == "none") {
+        sidebar.style.display = "flex";
+      } else {
+        sidebar.style.display = "none";
+      }
+    }
+    function hideSidebar() {
+      const sidebar = document.querySelector(`.sidebar`);
+      sidebar.style.display = "none";
+    }
+
+    // SCROLL FOR THE PLAYER CARDS
+
+    const defenderWrapper = document.getElementById("defenderWrapper");
+    const midfieldWrapper = document.getElementById("midfieldWrapper");
+    const forwardWrapper = document.getElementById("forwardWrapper");
+
+    function dfrightBtn() {
+      defenderWrapper.scrollBy({
+        left: 295,
+        behavior: "smooth",
+      });
+    }
+    function mfrightBtn() {
+      midfieldWrapper.scrollBy({
+        left: 295,
+        behavior: "smooth",
+      });
+    }
+    function fwrightBtn() {
+      forwardWrapper.scrollBy({
+        left: 295,
+        behavior: "smooth",
+      });
+    }
+    function dfleftBtn() {
+      defenderWrapper.scrollBy({
+        left: -295,
+        behavior: "smooth",
+      });
+    }
+    function mfleftBtn() {
+      midfieldWrapper.scrollBy({
+        left: -295,
+        behavior: "smooth",
+      });
+    }
+    function fwleftBtn() {
+      forwardWrapper.scrollBy({
+        left: -295,
+        behavior: "smooth",
+      });
+    }
+
+    // Change from Mens Team to U21s Team
+    function u21Team(){
+      menTeam = document.querySelector(".mens_team--section")
+      if(.mens_team--section == "")
+    }
 
   </script>
 </html>

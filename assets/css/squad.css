@@ -410,3 +410,10 @@
     display: none;
   }
 }
+
+
+/* Display */
+
+.mens_team--section{
+  display: none;
+}
