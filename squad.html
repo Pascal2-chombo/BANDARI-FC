@@ -135,7 +135,7 @@
           </div>
         </div>
       </div>
-      <div class="mens_team--section">
+      <div class="mens_team__section">
         <div class="goalkeepers">
           <div class="goalkeepers_header">
             <div>
@@ -436,7 +436,7 @@
           </div>
         </div>
       </div>
-      <div class="u21_team--section">
+      <div class="u21_team__section">
         <div class="goalkeepers">
           <div class="goalkeepers_header">
             <div>
@@ -480,21 +480,21 @@
             <div class="scroll_buttons">
               <button
                 class="squad_slide-btn__left"
-                onclick="dfleftBtn()"
-                id="leftSquadButton"
+                onclick="u21dfleftBtn()"
+                id="u21leftSquadButton"
               >
                 <span>🡨</span>
               </button>
               <button
                 class="squad_slide-btn__right"
-                onclick="dfrightBtn()"
-                id="rightSquadButton"
+                onclick="u21dfrightBtn()"
+                id="u21rightSquadButton"
               >
                 <span>🡪</span>
               </button>
             </div>
           </div>
-          <div class="defenders_wrapper" id="defenderWrapper">
+          <div class="defenders_wrapper" id="u21defenderWrapper">
             <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
@@ -596,21 +596,21 @@
             <div class="scroll_buttons">
               <button
                 class="squad_slide-btn__left"
-                onclick="mfleftBtn()"
-                id="leftSquadButton"
+                onclick="u21mfleftBtn()"
+                id="u21leftSquadButton"
               >
                 <span>🡨</span>
               </button>
               <button
                 class="squad_slide-btn__right"
-                onclick="mfrightBtn()"
-                id="rightSquadButton"
+                onclick="u21mfrightBtn()"
+                id="u21rightSquadButton"
               >
                 <span>🡪</span>
               </button>
             </div>
           </div>
-          <div class="midfielders_wrapper" id="midfieldWrapper">
+          <div class="midfielders_wrapper" id="u21midfieldWrapper">
             <div class="players">
               <div class="player_wrapper">
                 <div class="player_number">
@@ -699,21 +699,21 @@
             <div class="scroll_buttons">
               <button
                 class="squad_slide-btn__left"
-                onclick="fwleftBtn()"
-                id="leftSquadButton"
+                onclick="u21fwleftBtn()"
+                id="u21leftSquadButton"
               >
                 <span>🡨</span>
               </button>
               <button
                 class="squad_slide-btn__right"
-                onclick="fwrightBtn()"
-                id="rightSquadButton"
+                onclick="u21fwrightBtn()"
+                id="u21rightSquadButton"
               >
                 <span>🡪</span>
               </button>
             </div>
           </div>
-          <div class="forwards_wrapper" id="forwardWrapper">
+          <div class="forwards_wrapper" id="u21forwardWrapper">
             <div class="players"></div>
             <div class="players"></div>
             <div class="players"></div>
@@ -759,6 +759,9 @@
     const defenderWrapper = document.getElementById("defenderWrapper");
     const midfieldWrapper = document.getElementById("midfieldWrapper");
     const forwardWrapper = document.getElementById("forwardWrapper");
+    const u21defenderWrapper = document.getElementById("u21defenderWrapper");
+    const u21midfieldWrapper = document.getElementById("u21midfieldWrapper");
+    const u21forwardWrapper = document.getElementById("u21forwardWrapper");
 
     function dfrightBtn() {
       defenderWrapper.scrollBy({
@@ -797,10 +800,57 @@
       });
     }
 
+    // U 21s Team 
+    function u21dfrightBtn() {
+      u21defenderWrapper.scrollBy({
+        left: 295,
+        behavior: "smooth",
+      });
+    }
+    function u21mfrightBtn() {
+      u21midfieldWrapper.scrollBy({
+        left: 295,
+        behavior: "smooth",
+      });
+    }
+    function u21fwrightBtn() {
+      u21forwardWrapper.scrollBy({
+        left: 295,
+        behavior: "smooth",
+      });
+    }
+    function u21dfleftBtn() {
+      u21defenderWrapper.scrollBy({
+        left: -295,
+        behavior: "smooth",
+      });
+    }
+    function u21mfleftBtn() {
+      u21midfieldWrapper.scrollBy({
+        left: -295,
+        behavior: "smooth",
+      });
+    }
+    function u21fwleftBtn() {
+      u21forwardWrapper.scrollBy({
+        left: -295,
+        behavior: "smooth",
+      });
+    }
+
     // Change from Mens Team to U21s Team
+    function mensTeam(){
+      menTeam = document.querySelector(".mens_team__section");
+      youthTeam = document.querySelector(".u21_team__section");
+        menTeam.style.display = "block";
+        youthTeam.style.display = "none"
+  
+    }
     function u21Team(){
-      menTeam = document.querySelector(".mens_team--section")
-      if(.mens_team--section == "")
+      menTeam = document.querySelector(".mens_team__section");
+      youthTeam = document.querySelector(".u21_team__section");
+        menTeam.style.display = "none";
+        youthTeam.style.display = "block"
     }
 
   </script>
