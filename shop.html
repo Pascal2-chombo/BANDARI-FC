@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 1. NavBar -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- 2. Shop Style -->
+    <link rel="stylesheet" href="assets/css/shop.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+  </head>
+  <body>
+    <!-- Navigation bar section -->
+    <nav class="navbar">
+      <!-- Sidebar -->
+      <div class="navbar_container sidebar">
+        <div class="close">
+          <i onclick="hideSidebar()" data-lucide="x"></i>
+        </div>
+
+        <div class="navbar_logo">
+          <a href="#"
+            ><img src="assets/images/BANDARI-FC-Logo.png" alt="logo"
+          /></a>
+        </div>
+        <div class="navbar_sign">
+          <div class="navbar_sign-icon">
+            <button onclick="showDropdown()">
+              <i data-lucide="user-round"></i>
+            </button>
+          </div>
+          <div id="navDropdownSide" class="navbar_sign-dropdown">
+            <div class="navbar_sign-dropdown-sign">
+              <a href="login.html"><p>Sign In</p></a>
+            </div>
+            <div class="navbar_sign-dropdown-reg">
+              <a href="signin.html"><p>Register</p></a>
+            </div>
+          </div>
+        </div>
+        <div class="navbar_inputs">
+          <div class="navbar_inputs-container">
+            <div class="navbar_input home">
+              <a href="#"><p>Home</p></a>
+            </div>
+            <div class="navbar_input new">
+              <a href="#"><p>News</p></a>
+            </div>
+            <div class="navbar_input squad">
+              <a href="squad.html"><p>Squad</p></a>
+            </div>
+            <div class="navbar_input shop">
+              <a href="#"><p>Shop</p></a>
+            </div>
+            <div class="navbar_input tickets">
+              <a href="#"><p>Tickets</p></a>
+            </div>
+          </div>
+        </div>
+        <!-- Main navbar -->
+      </div>
+      <div class="navbar_container">
+        <div class="navbar_logo">
+          <a href="#"
+            ><img src="assets/images/BANDARI-FC-Logo.png" alt="logo"
+          /></a>
+        </div>
+        <div class="navbar_inputs">
+          <div class="navbar_inputs-container">
+            <div class="navbar_input home">
+              <a href="index.html"><p>Home</p></a>
+            </div>
+            <div class="navbar_input new">
+              <a href="#"><p>News</p></a>
+            </div>
+            <div class="navbar_input squad">
+              <a href="squad.html"><p>Squad</p></a>
+            </div>
+            <div class="navbar_input shop">
+              <a href="#"><p>Shop</p></a>
+            </div>
+            <div class="navbar_input tickets">
+              <a href="#"><p>Tickets</p></a>
+            </div>
+          </div>
+        </div>
+        <div class="navbar_sign">
+          <div class="navbar_sign-icon">
+            <button onclick="showDropdownMain()">
+              <i data-lucide="user-round"></i>
+            </button>
+          </div>
+          <div id="navDropdownMain" class="navbar_sign-dropdown">
+            <div class="navbar_sign-dropdown-sign">
+              <a href="login.html"><p>Sign In</p></a>
+            </div>
+            <div class="navbar_sign-dropdown-reg">
+              <a href="signin.html"><p>Register</p></a>
+            </div>
+          </div>
+        </div>
+        <div class="navbar_menu-icon">
+          <i onclick="showSidebar()" data-lucide="menu"></i>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      lucide.createIcons();
+      // To enable dropdown for navbar on signIn
+      // There should be two different Id names since getElemantById only returns the first element.
+      // The onclick values/name should also be different
+
+      const navDropdownSide = document.getElementById("navDropdownSide");
+      const navDropdownMain = document.getElementById("navDropdownMain");
+
+      function showDropdown() {
+        navDropdownSide.classList.toggle("active");
+      }
+      function showDropdownMain() {
+        navDropdownMain.classList.toggle("active");
+      }
+
+      // This is to enable sidebar for smaller divices.
+      function showSidebar() {
+        const sidebar = document.querySelector(`.sidebar`);
+        if (sidebar.style.display == "none") {
+          sidebar.style.display = "flex";
+        } else {
+          sidebar.style.display = "none";
+        }
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector(`.sidebar`);
+        sidebar.style.display = "none";
+      }
+
+ 
+    </script>
+  </body>
+</html>
