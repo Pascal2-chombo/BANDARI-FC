@@ -7,11 +7,16 @@
     <!-- 1. NavBar -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- 2. Shop Style -->
-    <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="stylesheet" href="assets/css/shop.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    
   </head>
   <body>
     <!-- Navigation bar section -->
@@ -108,6 +113,43 @@
         </div>
       </div>
     </nav>
+    <section>
+      <!-- 2. Banner Section -->
+      <div class="intro_image">
+        <div class="intro_header">
+          <h3>2026/27 Kits</h3>
+          <div class="intro_btn">
+            <button>Shop Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Kits Section -->
+      <div class="kit_container">
+        <div class="kit_content">
+          <h2>2026/27 Kits</h2>
+          <div class="scroll_btns">
+            <div>
+              <button class="scroll_btns--left"><span>🡨</span></button>
+            </div>
+            <div>
+              <button class="scroll_btns--right"><span>🡪</span></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="kit_wrapper">
+          <div class="kit_card"></div>
+          <div class="kit_card"></div>
+          <div class="kit_card"></div>
+          <div class="kit_card"></div>
+          <div class="kit_card"></div>
+          <div class="kit_card"></div>
+          <div class="kit_card"></div>
+          <div class="kit_card"></div>
+        </div>
+      </div>
+    </section>
 
     <script>
       lucide.createIcons();
@@ -138,8 +180,6 @@
         const sidebar = document.querySelector(`.sidebar`);
         sidebar.style.display = "none";
       }
-
- 
     </script>
   </body>
 </html>
