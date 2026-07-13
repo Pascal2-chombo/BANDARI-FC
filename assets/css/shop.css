@@ -18,24 +18,172 @@
   box-sizing: border-box;
   font-family: var(--main-font), sans-serif;
 }
-.intro_image{
-    width: 100%;
-    height: 420px;
-    background-color:grey ;
+.intro_image {
+  width: 100%;
+  height: 420px;
+  background-color: grey;
 }
-.kit_container{
-    padding: 30px;
+.kit_container {
+  padding: 30px;
 }
-.kit_wrapper{
-    display: flex;
-    gap: 1.6rem;
-    overflow-x: auto;
+.kit_content--logo img {
+  width: 72px;
+  height: 72px;
 }
-.kit_wrapper::-webkit-scrollbar{
-    display: none;
+.kit_content--header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.kit_card{
-    flex: 0 0 380px;
-    height: 480px; 
-    background-color: var(--secondary-color);
+.scroll_shop_btns {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.8rem;
+  margin-bottom: 12px;
+  margin-right: 10px;
+}
+.slide_shop-btn__left,
+.slide_shop-btn__right {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+.slide_shop-btn__left span,
+.slide_shop-btn__right span {
+  font-size: 28px;
+}
+.kit_wrapper {
+  display: flex;
+  gap: 1.6rem;
+  overflow-x: auto;
+}
+.kit_wrapper::-webkit-scrollbar {
+  display: none;
+}
+.kit_card {
+  flex: 0 0 380px;
+  height: 480px;
+  background-color: var(--secondary-color);
+}
+
+/* Accesories */
+
+.accessories_container {
+  padding: 40px;
+}
+.accessories_title h2 {
+  font-size: 54px;
+  font-family: var(--secondary-font);
+}
+.accessories_title-container::before {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 8px;
+  background-color: var(--fifth-color);
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.scroll_accessories_btns {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.8rem;
+  margin-bottom: 12px;
+  margin-right: 10px;
+}
+.slide_accessories-btn__left,
+.slide_accessories-btn__right {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+.slide_accessories-btn__left span,
+.slide_accessories-btn__right span {
+  font-size: 28px;
+}
+.accessories_wrapper {
+  display: flex;
+  gap: 1.6rem;
+  overflow-x: auto;
+}
+.accessories_wrapper::-webkit-scrollbar {
+  display: none;
+}
+.accessories_card {
+  flex: 0 0 380px;
+  height: 480px;
+  background-color: var(--secondary-color);
+}
+
+/* Offer */
+.offer{
+    margin: 42px 0;
+}
+.offer_container {
+  display: flex;
+  flex-direction: column;
+}
+.offer_container--top,
+.offer_container--bottom {
+  width: 100%;
+  height: 840px;
+  display: flex;
+}
+.offer_container--top--left,
+.offer_container--bottom--right {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+.offer_container--top--right,
+.offer_container--bottom--left {
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-color);
+}
+
+/* Training Kit & Casuals */
+.accessories_container {
+  padding: 40px;
+}
+.training_kits_title h2 {
+  font-size: 54px;
+  font-family: var(--secondary-font);
+}
+.training_kits_title-container::before {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 8px;
+  background-color: var(--fifth-color);
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.training_wrapper {
+  display: flex;
+  gap: 1.6rem;
+  overflow-x: auto;
+}
+.training_wrapper::-webkit-scrollbar {
+  display: none;
+}
+.training_card {
+  flex: 0 0 380px;
+  height: 480px;
+  background-color: var(--secondary-color);
 }
