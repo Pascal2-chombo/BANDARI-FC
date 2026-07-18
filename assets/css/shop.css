@@ -77,7 +77,7 @@
 /* Accesories */
 
 .accessories_container {
-  padding: 40px;
+  padding: 40px 0;
 }
 .accessories_title h2 {
   font-size: 54px;
@@ -186,4 +186,98 @@
   flex: 0 0 380px;
   height: 480px;
   background-color: var(--secondary-color);
+}
+
+@media (max-width: 1150px){
+/* Offer */
+.offer{
+    margin: 28px 0;
+}
+.offer_container {
+  display: flex;
+  flex-direction: column;
+}
+.offer_container--top,
+.offer_container--bottom {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.offer_container--top--left,
+.offer_container--bottom--right {
+  width: 100%;
+  height: 720px;
+  background-color: var(--primary-color);
+}
+.offer_container--top--right,
+.offer_container--bottom--left {
+  width: 100%;
+  height: 240px;
+  background-color: var(--secondary-color);
+}
+}
+@media (max-width: 785px){}
+@media (max-width: 412px){
+  /* Kits */
+  .kit_container {
+  padding: 20px;
+}
+.accessories_card {
+  flex: 0 0 360px;
+}
+  /* Accessories */
+.accessories_container {
+  padding: 20px;
+}
+.accessories_card {
+  flex: 0 0 360px;
+}
+.accessories_title h2 {
+  font-size: 34px;
+  font-family: var(--secondary-font);
+}
+.accessories_title-container::before {
+  content: "";
+  display: inline-block;
+  width: 70px;
+  height: 6px;
+  background-color: var(--fifth-color);
+  margin-right: 14px;
+  vertical-align: middle;
+}
+/* Scroll Buttons Hidden */
+.scroll_shop_btns,
+.scroll_accessories_btns{
+  display: none;
+}
+/* Training */
+.training_kits_title h2 {
+  font-size: 22px;
+  font-family: var(--secondary-font);
+}
+.training_kits_title-container::before {
+  content: "";
+  display: inline-block;
+  width: 70px;
+  height: 6px;
+  background-color: var(--fifth-color);
+  margin-right: 14px;
+  vertical-align: middle;
+}
+}
+@media (max-width: 360px){
+/* Offer */
+.offer_container--top--left,
+.offer_container--bottom--right {
+  width: 100%;
+  height: 575px;
+  background-color: var(--primary-color);
+}
+.offer_container--top--right,
+.offer_container--bottom--left {
+  width: 100%;
+  height: 200px;
+  background-color: var(--secondary-color);
+}
 }
