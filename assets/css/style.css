@@ -253,6 +253,12 @@ svg.lucide {
   font-size: 20px;
   cursor: pointer;
 }
+.hero_buttons button a {
+  text-decoration: none;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  font-size: 20px;
+}
 .hero_btn1::after {
   content: "→";
   color: var(--third-color);
@@ -263,14 +269,18 @@ svg.lucide {
 }
 .hero_btn1 {
   background-color: black;
-  color: var(--secondary-color);
   border: none;
   transition: 0.6s ease-in-out;
+} 
+.hero_btn1 a{
+  color: var(--secondary-color)
+}
+.hero_btn2 a{
+ color: var(--secondary-color);
 }
 .hero_btn2 {
   border: 2px solid var(--secondary-color);
   background-color: var(--third-color);
-  color: var(--secondary-color);
   transition: 0.6s ease-in-out;
 }
 .hero_btn1:hover {
@@ -2077,7 +2087,7 @@ footer {
     gap: 2.8rem;
   }
   /* 6. Shop Section */
-    .title-sub_container h1 {
+  .title-sub_container h1 {
     font-size: 34px;
     font-family: var(--secondary-font);
   }
